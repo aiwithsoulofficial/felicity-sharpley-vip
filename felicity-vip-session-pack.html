@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIP Session - Felicity Sharpley | Spiritual Badass Academy</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --forest: #1E3329;
+  --forest2: #2D4A3E;
+  --terra: #B85838;
+  --terra-soft: #C97B5A;
+  --gold: #B8945A;
+  --cream: #FBF6EC;
+  --cream-warm: #F5EDDB;
+  --paper: #FDFAF3;
+  --ink: #1F2622;
+  --ink-soft: #3F4943;
+  --muted: #6B7570;
+  --rule: #E4D9C2;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 18px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 56px;
+  padding: 48px 40px 120px;
+}
+@media (max-width: 900px) {
+  .wrap { grid-template-columns: 1fr; gap: 24px; padding: 24px 20px 80px; }
+  nav.toc { position: static !important; max-height: none !important; }
+}
+.hero {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, var(--forest) 0%, var(--forest2) 100%);
+  color: var(--cream);
+  padding: 64px 56px;
+  border-radius: 4px;
+  margin-bottom: 32px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(184,148,90,0.18), transparent 50%);
+  pointer-events: none;
+}
+.hero .eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1.05;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+.hero h1 em { color: var(--terra-soft); font-style: italic; }
+.hero .sub {
+  font-size: 17px;
+  color: rgba(251,246,236,0.82);
+  max-width: 620px;
+  line-height: 1.6;
+}
+.hero .meta {
+  margin-top: 28px;
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: rgba(251,246,236,0.7);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+@media (max-width: 700px) { .hero { padding: 40px 28px; } }
+nav.toc {
+  position: sticky;
+  top: 24px;
+  align-self: start;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  font-size: 13px;
+  line-height: 1.5;
+  padding-right: 8px;
+}
+nav.toc h4 {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+nav.toc ol { list-style: none; counter-reset: toc; }
+nav.toc li { counter-increment: toc; margin-bottom: 10px; }
+nav.toc a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  display: block;
+  padding: 4px 0;
+  border-bottom: 1px solid transparent;
+  transition: color .15s;
+}
+nav.toc a::before {
+  content: counter(toc, decimal-leading-zero) "  ";
+  color: var(--gold);
+  font-variant-numeric: tabular-nums;
+  margin-right: 4px;
+}
+nav.toc a:hover { color: var(--terra); }
+main { min-width: 0; }
+section.card {
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  padding: 44px 52px;
+  margin-bottom: 32px;
+  border-radius: 4px;
+}
+@media (max-width: 700px) { section.card { padding: 28px 22px; } }
+section h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: clamp(28px, 3.5vw, 36px);
+  line-height: 1.15;
+  color: var(--forest);
+  margin-bottom: 8px;
+  letter-spacing: -0.005em;
+}
+section .section-num {
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--terra);
+  margin-bottom: 20px;
+  display: block;
+}
+section h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--forest2);
+  margin-top: 36px;
+  margin-bottom: 12px;
+}
+section h4 {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--terra);
+  margin-top: 24px;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+section p { margin-bottom: 18px; color: var(--ink); }
+section em { color: var(--ink-soft); }
+section strong { color: var(--forest); font-weight: 600; }
+section ul, section ol { margin: 0 0 20px 22px; padding-left: 0; }
+section li { margin-bottom: 10px; padding-left: 6px; }
+section li::marker { color: var(--terra); }
+.quickref {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+  margin: 24px 0 8px;
+}
+.quickref .item {
+  background: var(--paper);
+  padding: 18px 20px;
+  border-left: 3px solid var(--terra);
+  border-radius: 2px;
+}
+.quickref .label {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.quickref .value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--forest);
+  line-height: 1.2;
+}
+.callout {
+  background: var(--cream-warm);
+  border-left: 4px solid var(--gold);
+  padding: 20px 26px;
+  margin: 24px 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  line-height: 1.5;
+  font-style: italic;
+  color: var(--forest);
+}
+.callout strong {
+  font-style: normal;
+  color: var(--terra);
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.kelly-note {
+  background: #FFF9EE;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  padding: 18px 22px;
+  margin: 20px 0;
+}
+.kelly-note .tag {
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--terra);
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+.kelly-note p { font-size: 16px; margin-bottom: 0; color: var(--ink-soft); }
+.warning {
+  background: #FBF1EC;
+  border-left: 4px solid var(--terra);
+  padding: 16px 22px;
+  margin: 20px 0;
+  font-size: 15px;
+  color: var(--ink-soft);
+}
+.transit-month {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 32px 38px;
+  margin-bottom: 22px;
+  border-radius: 4px;
+}
+.transit-month h3 {
+  margin-top: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+.transit-month h3 .tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: var(--cream-warm);
+  padding: 4px 10px;
+  border-radius: 2px;
+  font-weight: 500;
+}
+.transit-item { padding: 16px 0; border-bottom: 1px dashed var(--rule); }
+.transit-item:last-child { border-bottom: 0; }
+.transit-item .name {
+  font-weight: 600;
+  color: var(--terra);
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+.duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin: 24px 0;
+}
+@media (max-width: 600px) { .duo { grid-template-columns: 1fr; } }
+.duo .col { background: var(--paper); padding: 22px 24px; border-radius: 3px; }
+.duo .col h5 {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.duo .lean h5 { color: var(--forest); }
+.duo .patient h5 { color: var(--terra); }
+.duo ul { margin: 0; }
+.duo li { font-size: 15px; color: var(--ink-soft); }
+footer {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--rule);
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+footer .brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  color: var(--forest);
+  font-style: italic;
+  margin-bottom: 6px;
+}
+.lede {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  line-height: 1.5;
+  color: var(--forest2);
+  font-style: italic;
+  margin-bottom: 24px;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">Spiritual Badass Academy &middot; VIP Session Pack</div>
+    <h1>Felicity <em>Sharpley</em></h1>
+    <div class="sub">Natal chart, Human Design and three-month transit forecast (6 June - 6 September 2026). Kelly's preparation notes for the upcoming VIP session - the working document, not the client-facing reading.</div>
+    <div class="meta">
+      <span>Sun Virgo &middot; Moon Scorpio &middot; Leo Rising</span>
+      <span>Born 18 Sept 1982 &middot; Redcliffe QLD</span>
+      <span>HD Generator &middot; 1/3</span>
+      <span>Updated 6 June 2026</span>
+    </div>
+  </header>
+
+  <nav class="toc">
+    <h4>Contents</h4>
+    <ol>
+      <li><a href="#quickref">Core energetic signature</a></li>
+      <li><a href="#hd">HD type &amp; authority</a></li>
+      <li><a href="#purpose">Life purpose themes</a></li>
+      <li><a href="#career">Career &amp; calling</a></li>
+      <li><a href="#adhd">ADHD &amp; evolution of self</a></li>
+      <li><a href="#relationships">Family, husband, daughter</a></li>
+      <li><a href="#shadow">Shadow work &amp; growth edges</a></li>
+      <li><a href="#soulpath">Soul path &amp; soul tribe</a></li>
+      <li><a href="#june6">Transits: rest of June 2026</a></li>
+      <li><a href="#july">Transits: July 2026</a></li>
+      <li><a href="#august">Transits: August 2026</a></li>
+      <li><a href="#september">Transits: early September 2026</a></li>
+      <li><a href="#integration">Three-month integration</a></li>
+    </ol>
+  </nav>
+
+  <main>
+
+  <section class="card" id="quickref">
+    <span class="section-num">01 &middot; Core Signature</span>
+    <h2>Quick reference - the working portrait</h2>
+    <p class="lede">Felicity presents as Leo Rising warmth and performance. Her actual processing happens through deeply Virgoan, Scorpionic, fourth-house terrain. There is a real gap between how she appears and how much is happening internally.</p>
+
+    <div class="quickref">
+      <div class="item"><div class="label">Sun</div><div class="value">Virgo 28&deg;45'</div><div style="font-size:13px;color:var(--muted);margin-top:4px">3rd House</div></div>
+      <div class="item"><div class="label">Moon</div><div class="value">Scorpio 24&deg;37'</div><div style="font-size:13px;color:var(--muted);margin-top:4px">4th House</div></div>
+      <div class="item"><div class="label">Rising</div><div class="value">Leo 16&deg;22'</div><div style="font-size:13px;color:var(--muted);margin-top:4px">Ascendant</div></div>
+      <div class="item"><div class="label">North Node</div><div class="value">Cancer 9&deg;40'</div><div style="font-size:13px;color:var(--muted);margin-top:4px">11th House &middot; Rx</div></div>
+      <div class="item"><div class="label">HD Type</div><div class="value">Generator</div><div style="font-size:13px;color:var(--muted);margin-top:4px">Splenic Authority</div></div>
+      <div class="item"><div class="label">Profile</div><div class="value">1 / 3</div><div style="font-size:13px;color:var(--muted);margin-top:4px">Investigator / Martyr</div></div>
+    </div>
+
+    <div class="kelly-note">
+      <span class="tag">Kelly preparation note</span>
+      <p>The 1/3 profile means she is fundamentally a researcher who learns through trial and error. This is the context for EVERYTHING she is asking about. Getting things "wrong" is literally part of her correct path - she was never meant to receive the map; she lives it first, then maps it.</p>
+    </div>
+  </section>
+
+  <section class="card" id="hd">
+    <span class="section-num">02 &middot; Human Design</span>
+    <h2>Type, authority and the channel of power</h2>
+
+    <h3>Confirmed definition: Channel 34-57 (The Channel of Power)</h3>
+    <p>Gate 34 (Sacral) is activated three times - Personality Mars, Personality Uranus, and Design Uranus. Gate 57 (Spleen) is activated in Personality Mercury and Design Saturn. Together they form a complete channel connecting the <strong>Sacral</strong> and the <strong>Spleen</strong>. Both centres are defined.</p>
+
+    <h4>HD Type: Generator</h4>
+    <p>Sacral defined and connected. Felicity is here to <em>respond</em>, not initiate cold. Her energy is sustainable and consistent when she is doing work that lights her up - and depletes fast when she is not. This is a physiological law for her, not a preference.</p>
+
+    <h4>Authority: Splenic</h4>
+    <p>Her gut-level, in-the-moment intuitive hits are her truth-telling system. The Spleen speaks <strong>once</strong>, quietly, in the now - it does not repeat itself. This is the opposite of overthinking and waiting. She needs to trust the first whisper. If she misses it, she misses it; another will come, but not the same one twice.</p>
+
+    <h4>Profile: 1/3 (Investigator / Martyr)</h4>
+    <p>Line 1 needs a solid foundation of research and information before she feels secure. Line 3 learns everything through direct experience and trial and error - not from following someone else's map. Mistakes are literally part of her correct path.</p>
+
+    <div class="callout">
+      <strong>Kelly talking point</strong>
+      "Your design is not asking you to get it right the first time. It's asking you to start, notice what doesn't fit, and adjust. The 'wrong' turns are the data - they're not detours, they're the path."
+    </div>
+
+    <h3>Notable repeated gates</h3>
+    <ul>
+      <li><strong>Gate 34 - tripled.</strong> Exceptional emphasis on sacral power and sustainable action. Misused (uninspiring work, "shoulds") it becomes burnout fuel. Used correctly it is enormous capacity.</li>
+      <li><strong>Gate 32 - doubled</strong> (Saturn Line 2 + Pluto Line 6). The gate of duration and continuity - assesses what's worth preserving vs. what must be released for the larger system to survive. Her family-distancing instinct is partly this gate at work.</li>
+      <li><strong>Gate 11 - doubled</strong> across Personality and Design Neptune. Ideation, ideas, vision. She has an inner reservoir of ideas - the question is which ones she can ground.</li>
+      <li><strong>Gate 39 - North Node, both Personality and Design.</strong> The Provocateur. She is here to provoke depth in others - including (especially) in her family system.</li>
+    </ul>
+
+    <div class="warning">
+      <strong>Flag for Kelly:</strong> The 34-57 channel is the confirmed definition from the available activations. Cross-check against a full BodyGraph render before the session - Ajna and Solar Plexus definitions need visual verification. Working determination is Generator / Splenic Authority unless emotional definition is found, in which case Emotional Authority overrides.
+    </div>
+  </section>
+
+  <section class="card" id="purpose">
+    <span class="section-num">03 &middot; Life Purpose</span>
+    <h2>What she's actually here for</h2>
+
+    <h3>Sun in Virgo 28&deg; - 3rd House</h3>
+    <p>Late-degree Virgo, almost at the Virgo-Libra cusp, sitting in the house of communication, learning, local environment, and the mind. Her sense of identity and purpose is fundamentally tied to:</p>
+    <ul>
+      <li><strong>Service through information and communication</strong> - not vague service. Precise, useful, practical knowledge-sharing.</li>
+      <li><strong>The refinement of ideas</strong> - she is wired to take complex things and make them usable.</li>
+      <li><strong>Noticing what is broken or inefficient and fixing it</strong> - Virgo Sun cannot switch this off.</li>
+      <li><strong>Her immediate environment and community</strong> - the 3rd House makes her impact local and relational before it goes wide.</li>
+    </ul>
+    <p>The 28&deg; position is significant. In traditional astrology this is sometimes called a <em>"finishing degree."</em> She may feel a strong sense she is completing a chapter of identity and is on the edge of a new self. This is not projection - it is cosmically accurate.</p>
+
+    <h4>HD Gate 46, Line 1 - Determination of the Self / Love of the Body</h4>
+    <p>Personality Sun gate. About being in the right place at the right time, and deeply connected to embodiment - being IN the body, not in the head. Line 1 means her foundation is built on self-discovery. ADHD treatment that helps her come into her body is directly aligned with this gate activating correctly.</p>
+
+    <h3>Moon in Scorpio 24&deg; - 4th House</h3>
+    <p>Her emotional and instinctual life is Scorpionic and rooted in the home, family, ancestral lineage, and private inner world. An intense placement. She feels things at a cellular level. She does not do surface. Her emotional security comes from:</p>
+    <ul>
+      <li>Deep psychological understanding (her own and others')</li>
+      <li>Privacy and control over her inner sanctum</li>
+      <li>Processing and transformation - she needs to <em>metabolize</em> experiences, not just move on</li>
+      <li>Feeling she has SEEN the truth, even when it is uncomfortable</li>
+    </ul>
+
+    <div class="callout">
+      <strong>The most important sentence in this section</strong>
+      The 4th House Moon does not compartmentalize. Her family dynamics, her daughter's health, and her husband's wellbeing are not separate from her own wellbeing - they are the SAME thing inside her nervous system.
+    </div>
+
+    <h4>HD Gate 14, Line 1 - Power Skills / Possession in Great Measure</h4>
+    <p>Personality Moon gate. One of the most materially powerful gates in the chart - about having resources and energy to allocate toward what matters. Line 1 emphasizes foundation. She has more inner resources than she currently recognizes. This gate feeds the Sacral's response mechanism.</p>
+  </section>
+
+  <section class="card" id="career">
+    <span class="section-num">04 &middot; Career &amp; Calling</span>
+    <h2>The communication-and-systems calling</h2>
+
+    <p>The 3rd House stellium - Sun, Mercury, Saturn, Pluto - makes career themes heavily communication and knowledge-based. This is someone who is meant to THINK, RESEARCH, COMMUNICATE, and SYSTEMIZE.</p>
+
+    <h3>Virgo placements in career context</h3>
+    <ul>
+      <li>Health, wellness, and healing fields are highly resonant</li>
+      <li>Analysis, editing, writing, data, process improvement</li>
+      <li>Working with details others miss</li>
+      <li>Support roles that are actually leadership roles - she leads through competence, not title</li>
+    </ul>
+
+    <h3>The Saturn-in-Libra story</h3>
+    <p><strong>Saturn in Libra in the 3rd House</strong> is critically important. Saturn here means she has had to WORK for her voice, her ideas, her credibility. She may have faced communication blocks, felt unheard, or struggled to translate her ideas into words that land. Saturn rewards over time - her credibility, expertise, and authority in communication fields BUILDS with age. <em>She is not meant to peak early.</em> This placement gets better from mid-30s onward.</p>
+
+    <h3>Gate 34 tripled - the energetic mandate</h3>
+    <p>Extraordinary emphasis on sacral power and sustainable action. She has enormous energetic capacity when she is doing what responds to her correctly. When she is stuck in uninspiring work, this triple Gate 34 energy turns against her - she becomes exhausted, frustrated, and depleted. Finding work that generates a "yes" in her Sacral is not optional. It is a health imperative.</p>
+
+    <h3>Gate 57 - splenic wisdom / intuitive clarity</h3>
+    <p>Activated in both her personal and design Mercury / Saturn. She has an intuitive intelligence that is extremely sharp. She may dismiss it or think everyone has it. They do not. This is a gift that, when trusted, can be applied practically in a work context.</p>
+
+    <h3>Career directions to raise with her</h3>
+    <ul>
+      <li>Anything in the ADHD / neurodivergence support space (personal experience + Virgo precision + Scorpio depth = unusual triangulation)</li>
+      <li>Health education, wellness coaching, or patient advocacy</li>
+      <li>Writing, content creation, research-based roles</li>
+      <li>Working within systems she can improve and refine</li>
+      <li><strong>Do NOT push her toward cold-start entrepreneurship</strong> or highly initiatory roles - she is a Generator and needs to RESPOND to opportunities that come to her</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Ask her this</strong>
+      "When someone presents you with a problem or project, is there a type of work where your whole body says yes immediately? That physical gut response - that's your compass."
+    </div>
+  </section>
+
+  <section class="card" id="adhd">
+    <span class="section-num">05 &middot; ADHD &amp; Evolution</span>
+    <h2>The diagnosis is a beginning, not a conclusion</h2>
+
+    <p class="lede">Will things improve? Yes - and the chart says this is cosmically timed, not accidental.</p>
+
+    <h3>Late Virgo Sun + Mercury Retrograde in Libra</h3>
+    <p>Mercury retrograde in the natal chart is often associated with a mind that works differently - that processes internally, non-linearly, and in ways that do not match standard communication norms. ADHD and natal Mercury Rx are frequently correlated in lived experience (not a clinical claim, but a pattern). Her mind revisits, reconsiders, and processes on its own timeline.</p>
+
+    <h3>1/3 Profile - Line 3 (The Martyr)</h3>
+    <p>The 3rd Line is the trial-and-error line. This person's entire growth mechanism is bumping into things, things not working, and discovering what DOES work through direct experience. Getting a diagnosis late is 100% consistent with a 3rd line life - <em>she was not meant to have the map handed to her.</em> She had to live it first. The diagnosis is not a conclusion. It is a foundation (Line 1 kicking in now) for a completely new phase.</p>
+
+    <h3>Gate 47 (Personality Venus) - Realization / The Mind's Oppression</h3>
+    <p>Literally the gate of mental pressure and the process of making sense of what seemed like confusion or failure. It resolves <strong>suddenly</strong>, not gradually. This is the gate that says "things that made no sense will crystallize into meaning." The ADHD diagnosis IS a Gate 47 resolution moment. Encourage her to note that more clarity moments like this are coming - the chart says yes.</p>
+
+    <h3>Saturn in Libra - 3rd House (again)</h3>
+    <p>Saturn rules systems, structure, and mastery through discipline. In Libra in the 3rd House, she needs <strong>external structure</strong> for her thinking and communication to operate at full power. Medication and support systems are not a crutch for her - they are literally Saturn's gift. This is her building a structure that lets her natural intelligence operate.</p>
+
+    <div class="callout">
+      <strong>Talking point</strong>
+      "Your chart has always pointed to someone whose mind works on its own terms. The diagnosis does not change who you are - it gives you permission to stop fighting how you actually work."
+    </div>
+  </section>
+
+  <section class="card" id="relationships">
+    <span class="section-num">06 &middot; Emotional Patterns</span>
+    <h2>Family, husband, daughter</h2>
+
+    <h3>Family of origin - parents and brother</h3>
+    <p><strong>Moon in Scorpio 4th House + North Node in Cancer 11th House.</strong> One of the most significant tension points in the chart. Her soul growth direction (North Node Cancer) is toward nurturing, emotional safety, and belonging in community. But her 12th House is Cancer, meaning this nurturing, emotional-home energy is also her most hidden, difficult-to-access, and potentially wounded territory.</p>
+
+    <p><strong>Saturn in the 3rd House opposite her 9th House Pisces:</strong> Family communication has likely been a place of judgment, criticism, or emotional unavailability. The 3rd House rules siblings and close relatives. Saturn here = heavy, burdensome, or limiting sibling / family communication dynamics.</p>
+
+    <h4>The chart supports her distancing</h4>
+    <ul>
+      <li><strong>Scorpio Moon</strong> needs privacy and energetic safety above everything else. Toxic family dynamics are genuinely physically harmful to this Moon placement - not metaphorically, somatically.</li>
+      <li><strong>Gate 44</strong> (Personality Jupiter) - "Coming to Meet / Alertness to the Past" - the gate of ancestral patterns and the wisdom to recognise when old patterns threaten present wellbeing. She has an innate ability to SPOT these. Her body knows before her mind does.</li>
+      <li><strong>Gate 32 doubled</strong> - the gate of duration. It assesses what's worth preserving and what must be released for the larger system to survive. Her Splenic wisdom may have been quietly telling her this for years.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Talking point</strong>
+      "Your instincts about what is and is not safe for you are part of your Authority. The discomfort of distance is not a sign you are doing the wrong thing - it's the cost of the right one."
+    </div>
+
+    <h3>Husband's health</h3>
+    <p>The 4th House (home, family, foundation) holds Moon, Mars, Jupiter, and Uranus. A LOT of energy in the domestic / partnership foundation space. <strong>Mars and Uranus conjunct in Sagittarius in the 4th</strong> suggests sudden changes and disruptions in the home base - but also remarkable resilience and recovery capacity. <strong>Jupiter in Scorpio in the 4th</strong> is deeply protective energy for the family unit - it expands and protects beneath the surface.</p>
+
+    <p><strong>Gate 34 tripled + Jupiter in Scorpio:</strong> Strong regenerative and healing potential in the chart's relationship to the masculine / active energy in the home. This does not predict outcomes, but it does suggest that the foundational energy of the relationship has significant reserves.</p>
+
+    <div class="kelly-note">
+      <span class="tag">How to hold this</span>
+      <p>Hold space for her fear without confirming or denying outcomes. Point to Gate 44 and Gate 46 as indicators that she is alert to what needs attention AND that she tends to be in the right place at the right time. Do not predict the husband's prognosis - that is not the chart's job and not Kelly's role.</p>
+    </div>
+
+    <h3>Daughter's health</h3>
+    <p><strong>Scorpio Moon mothers feel their children's pain as their own pain.</strong> This is not metaphor - it is physiological for this Moon placement. Felicity cannot separate her daughter's wellbeing from her own nervous system. This is important to name gently.</p>
+
+    <p><strong>North Node in Cancer in the 11th House:</strong> Her soul evolution involves finding her COMMUNITY OF BELONGING - which may well include connecting with other parents of neurodivergent children, ADHD community spaces, or chronic-illness parent groups. Her daughter's diagnoses may be part of what leads Felicity to her people.</p>
+
+    <p><strong>Gate 39 (North Node gate - both Personality and Design):</strong> The Provocateur. This gate provokes emotional depth and awakening in others. Her daughter's challenges are not separate from Felicity's awakening. Not in a blame or karma sense - in the sense that souls choose their journey together.</p>
+  </section>
+
+  <section class="card" id="shadow">
+    <span class="section-num">07 &middot; Shadow Work</span>
+    <h2>Growth edges - five themes to raise gently</h2>
+
+    <h3>1. The Perfectionism Trap (Virgo Sun + Venus)</h3>
+    <p>Felicity likely holds herself to an impossible standard. Virgo Sun in Virgo-cusp degrees with Venus also in Virgo means she may struggle to feel "good enough" before acting. The 1/3 profile <strong>requires</strong> that she act before she is ready and learn from the result. These two forces - Virgo perfectionism vs. 3rd Line trial-and-error - will be in perpetual tension unless she consciously works with it.</p>
+    <p><em>Antidote:</em> Set a "good enough threshold" before starting anything, not at the end. Decide upfront what "done" means - then ship at that line, even when Virgo wants more.</p>
+
+    <h3>2. Control vs. Surrender (Scorpio Moon)</h3>
+    <p>Deep water signs need to understand what they can and cannot control. Her Moon in Scorpio may compulsively try to gather information and control outcomes to feel safe. The Splenic Authority is asking her to trust the moment - which is the opposite of Scorpionic control-seeking.</p>
+    <p><em>Antidote:</em> Practice noticing the FIRST gut response in low-stakes decisions (what to eat, which route to drive). Build the muscle there before applying it to bigger choices.</p>
+
+    <h3>3. Gate 47 mental pressure</h3>
+    <p>This gate can generate a persistent sense of futility, meaninglessness, or "what is the point." When she is in this space, she needs to know it is a <strong>gate, not a truth</strong> - part of her processing cycle, not a verdict on her life. Gate 47 resolves suddenly, not gradually, so the work is to wait it out without making permanent decisions inside it.</p>
+
+    <h3>4. 3rd Line shame</h3>
+    <p>People with the 3rd Line in their profile often carry significant shame about all the things they have "tried and failed at" - relationships, jobs, identities, geographies. The culture pathologises this. The design says it is correct. Her trial-and-error track record is not a list of failures. It is her resume. Every wrong fit taught her something about what right feels like. Reframing this is one of the most powerful things Kelly can offer in the session.</p>
+
+    <div class="callout">
+      <strong>Reframe to offer</strong>
+      "You haven't been failing at life. You've been collecting the data only you could collect. The diagnosis, the distancing from family, the career questioning - these aren't fall-out, they're the work."
+    </div>
+
+    <h3>5. The Leo Rising performance tax</h3>
+    <p>Leo Rising means she presents warm, capable, often "shining." This costs her energy that Scorpio Moon and Virgo Sun need for inner work. Watch for the pattern where she over-performs in social and professional contexts and crashes privately. Permission to NOT be on - especially around family of origin and surface-level social settings - is part of her healing.</p>
+  </section>
+
+  <section class="card" id="soulpath">
+    <span class="section-num">08 &middot; Soul Path</span>
+    <h2>North Node Cancer 11th House - the tribe she hasn't found yet</h2>
+
+    <p class="lede">Her South Node in Capricorn 5th House is what she's leaving. North Node in Cancer 11th House is what she's walking toward. The whole chart is built around this migration.</p>
+
+    <h3>What she's coming from - South Node Capricorn 5th House</h3>
+    <ul>
+      <li>Capricorn = structure, achievement, doing things "properly," earning love through performance</li>
+      <li>5th House = creative self-expression, children, joy, romance</li>
+      <li>Together: a past-life / familiar pattern of <em>performing for approval</em>, especially in creative or parenting contexts. Achievement as identity.</li>
+      <li>This is the pattern that the Virgo perfectionism is reinforcing in this lifetime.</li>
+    </ul>
+
+    <h3>What she's walking into - North Node Cancer 11th House</h3>
+    <ul>
+      <li>Cancer = nurture, emotional safety, belonging, soft power</li>
+      <li>11th House = chosen family, soul tribe, community, the people who get you</li>
+      <li>Together: <strong>being held by community rather than holding herself up alone.</strong> Receiving care, not just giving it. Letting people in.</li>
+    </ul>
+
+    <p>The North Node is retrograde, which intensifies the pull - she has been circling this lesson for a long time, and the universe will keep arranging the conditions until she steps into it.</p>
+
+    <h3>Why this is so loaded for her right now</h3>
+    <p>Jupiter is transiting Cancer through this window and will conjunct the North Node by mid-year. This is a once-in-twelve-year transit. The people she is meant to meet are being drawn in NOW. Her job is to be findable - which means visible enough in her actual truth that the right people can recognise her. Leo Rising performance is the opposite of findability for soul tribe.</p>
+
+    <div class="callout">
+      <strong>The soul-path question</strong>
+      "Who in your life right now actually sees the Scorpio Moon part of you - not the Leo Rising part? Those are your people. The rest are appointments."
+    </div>
+  </section>
+
+  <section class="card" id="june6" style="background:var(--paper);">
+    <span class="section-num">09 &middot; Transits</span>
+    <h2>Rest of June 2026 - the headline window</h2>
+
+    <p class="lede">The next twenty-four days are the most important emotionally of the entire three-month window. Jupiter is in its final degrees of Cancer, exactly trining her natal Moon mid-month - then it crosses into Leo and begins the once-in-twelve-year identity expansion that will define her next year.</p>
+
+    <div class="transit-month">
+      <h3>Most significant transits <span class="tag">6 - 30 June</span></h3>
+
+      <div class="transit-item">
+        <div class="name">Transit Jupiter 25-29&deg; Cancer trine natal Moon 24&deg; Scorpio (4th) - exact 12-15 June</div>
+        <p>This is the headline transit of this entire pack. Jupiter in late Cancer trine her natal Moon in Scorpio is one of the most healing emotional aspects in astrology. It expands her capacity to feel without drowning, and it opens a door to ancestral material - particularly maternal lineage. <strong>The window 10-18 June is exceptionally potent</strong> for dreams, intuitive flashes, conversations with women older than her, and tears that finally come. Things she has been carrying that felt impossible begin to feel manageable - not because circumstances have changed, but because her internal container has grown. <em>Tell Felicity not to plan high-output work that week.</em> She needs unstructured time for what wants to surface.</p>
+      </div>
+
+      <div class="transit-item">
+        <div class="name">Mars enters Leo - 17 June - igniting natal 1st House</div>
+        <p>Mars crosses into Leo on 17 June and starts moving toward her Ascendant at 16&deg; Leo. This is the first body-level signal of the identity shift coming. She may notice: more physical energy, an unfamiliar desire to be seen, irritation at things she has been tolerating quietly, a felt sense of "I want more." Mars in the 1st House is uncomfortable for someone with a strong Virgo Sun (Virgo prefers small and useful, not visible and loud). The work is to let the energy through without forcing it into Virgo's old containers.</p>
+      </div>
+
+      <div class="transit-item">
+        <div class="name">Sun ingress Cancer - 21 June - activating 12th House</div>
+        <p>The Sun enters Cancer at the solstice and joins Jupiter in her 12th House (Cancer = 12th house from Leo Rising). The 12th House rules dreams, rest, the unconscious, what's hidden, and spiritual processing. This is a week to <strong>not push</strong>. The Sun in the 12th is asking her to retreat, sleep more, dream more, and pay attention to what arises from underneath. Combined with Jupiter trining the Moon, this is some of the deepest interior work of her year.</p>
+      </div>
+
+      <div class="transit-item">
+        <div class="name">Jupiter ingresses Leo - 30 June - the threshold</div>
+        <p>The biggest astrological event of 2026 for her personally. Jupiter leaves Cancer and enters Leo, beginning a year-long transit through her 1st House and toward her natal Ascendant (exact conjunction mid-September). This is the start of a twelve-month identity expansion - the kind that only happens every twelve years. What she has been quietly becoming in the privacy of Cancer-Jupiter season is about to walk out into the daylight. <strong>Anything she wants to launch, announce, or commit to publicly is well-supported from 30 June onward.</strong></p>
+      </div>
+
+      <div class="transit-item">
+        <div class="name">Saturn at 12&deg; Aries - slow square to natal North Node (9&deg; Cancer)</div>
+        <p>Saturn is sitting on her natal North Node by square through this whole window, slowing toward its retrograde station mid-July. This is a soul-path quality control test. Anything she has said yes to recently around community, friendships, or her direction will be pressure-tested for sustainability. Saturn isn't blocking - it's asking <em>"are you serious about this?"</em> If she's serious, Saturn structures it. If she isn't, Saturn dissolves it gently so she can stop pretending.</p>
+      </div>
+
+      <div class="transit-item">
+        <div class="name">Neptune 3&deg; Aries - ongoing square to natal Mars/Uranus 1&deg; Sagittarius (4th)</div>
+        <p>Continuing slow-burn transit. Affects clarity around home life, the husband's health, and her daughter's care. Direct decisions about medical or domestic matters made in the murky weeks (especially around 18-25 June when Mercury is in Cancer near Jupiter) may not see clearly. Defer big-call decisions if possible. If she must decide, lean on Splenic Authority (the first gut response) rather than mental analysis.</p>
+      </div>
+    </div>
+
+    <div class="duo">
+      <div class="col lean">
+        <h5>Lean into 6-30 June</h5>
+        <ul>
+          <li>12-18 June: open calendar space for emotional surfacing - the Jupiter-Moon trine wants room</li>
+          <li>Ancestral work - written letters to grandmother, photo viewing, family stories</li>
+          <li>Saying the long-held thing out loud to one safe person</li>
+          <li>Resting more around the solstice (21 June) and the few days after</li>
+          <li>Naming what she wants to launch / commit to from 30 June</li>
+        </ul>
+      </div>
+      <div class="col patient">
+        <h5>Be patient with 6-30 June</h5>
+        <ul>
+          <li>Saturn's square on her North Node - what falls away wasn't hers to keep</li>
+          <li>Neptune fog around home / medical decisions - defer non-urgent ones</li>
+          <li>Mars in Leo creating restlessness she can't yet explain - it's not anxiety, it's the body waking up</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="card" id="july" style="background:var(--paper);">
+    <span class="section-num">10 &middot; Transits</span>
+    <h2>July 2026 - the threshold month</h2>
+
+    <p class="lede">July is when Jupiter takes up residence in her 1st House and Mars is still firing there. For the first time in twelve years she has both the planet of expansion and the planet of action in her identity field at the same time. This is a month to <em>start things</em>.</p>
+
+    <div class="transit-month">
+      <h3>Most significant transits <span class="tag">July</span></h3>
+
+      <div class="transit-item">
+        <div class="name">Jupiter 0-7&deg; Leo - now in her 1st House for the next 12 months</div>
+        <p>Jupiter spends all of July moving through the early degrees of Leo, building toward her natal Ascendant at 16&deg;22'. The conjunction isn't exact until mid-September, but the energy is already here. Her body knows. People may comment that something is different about her without being able to name it. She may notice unfamiliar boldness, an appetite for visibility, or a quiet refusal to keep playing small. <strong>July is the month to start the project, write the email, take the meeting, name the desire.</strong> Jupiter rewards initiation in this transit.</p>
+      </div>
+
+      <div class="transit-item">
+        <div class="name">Mars 0-25&deg; Leo - momentum through the 1st House all month</div>
+        <p>Mars continues through Leo for most of July. Combined with Jupiter, this is the energy injection of the year. She may sleep less and want more - more movement, more output, more interaction. The Virgo Sun will try to convert this energy into perfectionism (re-doing the website, re-organising the house, re-planning the year). Redirect it: <strong>action that creates something new beats action that polishes something old.</strong></p>
+      </div>
+
+      <div class="transit-item">
+        <div class="name">Saturn stations retrograde 12&deg; Aries - around 13 July</div>
+        <p>Saturn slows down and turns retrograde mid-month, beginning a five-month review phase that runs through to late November. Saturn at 12&deg; Aries is on her natal North Node by square - so the review focuses on her soul-path commitments. What has she said yes to in the last 3-6 months that isn't actually sustainable? What did she rush past? Saturn retrograde is not punishment - it is quality control. Anything she rushed in May-June around community, friendships, work direction will get re-tested. <em>What survives this retrograde was real. What dissolves wasn't.</em></p>
+      </div>
+
+      <div class="transit-item">
+        <div class="name">Sun ingress Leo - 23 July - 1st House spotlight</div>
+        <p>The Sun enters Leo on 23 July and joins Jupiter and Mars in her 1st House. This is the most extroverted, visible, identity-bright week of her year so far. Confidence is supported. Self-expression is supported. Putting herself in front of new people is supported. If there is a launch, an introduction, a public moment, a fresh photo - this is the week.</p>
+      </div>
+
+      <div class="transit-item">
+        <div class="name">Mercury in Leo from 27 July - voice in 1st House</div>
+        <p>Mercury joins the Leo party late month. Her voice (which has been heavy and Saturnian for years) gets lighter, warmer, more confident. This is the right window to write the bio, record the video, write the post, have the conversation she has been rehearsing. <strong>Words land differently when Mercury is in Leo for her - they carry her presence.</strong></p>
+      </div>
+
+      <div class="transit-item">
+        <div class="name">Neptune 3&deg; Aries - still squaring natal Mars/Uranus (4th)</div>
+        <p>The slow background hum continues. Home/health uncertainty doesn't suddenly clear in July. The work isn't to solve it - it's to stop trying to think her way out of it. Splenic Authority, body-based knowing, "wait for the next clear yes." That's the right relationship to Neptune-square energy.</p>
+      </div>
+    </div>
+
+    <div class="duo">
+      <div class="col lean">
+        <h5>Lean into in July</h5>
+        <ul>
+          <li>Initiation - start the thing she has been gestating</li>
+          <li>Visibility plays - the bio, the photo, the post, the introduction</li>
+          <li>The last week of July - Mercury in Leo + Sun in Leo + Jupiter in Leo = the sweet spot</li>
+          <li>Movement and physical activity - Mars in Leo wants to be expressed somatically</li>
+        </ul>
+      </div>
+      <div class="col patient">
+        <h5>Be patient with in July</h5>
+        <ul>
+          <li>Saturn retrograde reviewing commitments - what dissolves wasn't yours</li>
+          <li>Virgo's pull to perfect before launching - Mars wants motion not polish</li>
+          <li>Continued Neptune fog around home decisions - keep deferring non-urgent calls</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="card" id="august" style="background:var(--paper);">
+    <span class="section-num">11 &middot; Transits</span>
+    <h2>August 2026 - peak vitality &amp; the solar return approach</h2>
+
+    <p class="lede">August is her body's month. Mars enters Virgo and walks straight onto her natal Venus and her natal Sun. Combined with the New Moon in Leo on her Ascendant and the Sun crossing into her 2nd House mid-month, this is the energetic peak of her year. If she could pick one month to launch a business, a body of work, or a new chapter - this is it.</p>
+
+    <div class="transit-month">
+      <h3>Most significant transits <span class="tag">August</span></h3>
+
+      <div class="transit-item">
+        <div class="name">Sun conjunct natal Ascendant - around 8 August</div>
+        <p>The Sun crosses her Ascendant at 16&deg; Leo on around 8 August. This is the brightest external visibility moment of her year. Whatever she has been quietly becoming through July, this is the week others see it. Energy is high, presence is high, the Leo Rising mask either falls away or becomes a clear authentic expression. Plan something visible for that week.</p>
+      </div>
+
+      <div class="transit-item">
+        <div class="name">New Moon in Leo - around 12 August - near her Ascendant</div>
+        <p>The New Moon falls in Leo within a few degrees of her natal Ascendant. <strong>This is her personal new year preview.</strong> Her solar return is six weeks away, but this New Moon is the seeding moment. Intentions set here root deeply. Recommend she write a clear list of what the next twelve months are about - not goals in the productivity sense, but commitments in the soul sense. Who does she want to be by August 2027?</p>
+      </div>
+
+      <div class="transit-item">
+        <div class="name">Mars ingress Virgo - 6 August - heading for natal Venus and Sun</div>
+        <p>Mars leaves Leo and enters Virgo, beginning its walk across her natal Venus (Virgo 17&deg;) and natal Sun (Virgo 28&deg;). This is the biggest action transit of the entire window. Mars in Virgo is detail-oriented, methodical, productive - perfect Generator fuel for her. Combined with Jupiter still in Leo expanding her identity, this is the month where the vision turns into <em>work that gets done</em>.</p>
+      </div>
+
+      <div class="transit-item">
+        <div class="name">Mars conjunct natal Venus - around 17 August</div>
+        <p>Mars crosses her natal Venus at 17&deg; Virgo on around 17 August. Venus rules her self-worth, her values, her relationship to money and beauty. Mars on Venus activates desire - she may notice strong "I want this" responses that have been quiet for years. Self-worth recalibration. Possibly an income shift or a creative project that suddenly takes form. Watch for irritability around things that disrespect her worth - Mars on Venus has low tolerance for being underpaid, undervalued, or talked down to.</p>
+      </div>
+
+      <div class="transit-item">
+        <div class="name">Sun ingress Virgo - 23 August - solar return season opens</div>
+        <p>The Sun enters Virgo on 23 August and begins approaching her natal Sun. This is the start of her personal birthday season - the four weeks before a solar return are when the year quietly closes. Recommend she begin a soft review of the year just gone: what worked, what didn't, what she's grateful for, what she's done with. This is also when her energy starts to turn inward - Virgo Sun likes to clean up before celebrating.</p>
+      </div>
+
+      <div class="transit-item">
+        <div class="name">Mars conjunct natal Sun - 28-30 August - peak vitality</div>
+        <p>Mars conjuncts her natal Sun at 28&deg; Virgo at the end of the month. <strong>This is the single highest-vitality window of her year.</strong> Body energy peaks. Drive peaks. Decisiveness peaks. Plan something physical or active here - she will not be able to sit still anyway. Also a good window for making decisions she has been delaying: Mars on Sun gives temporary access to courage that's harder to find at other times.</p>
+      </div>
+
+      <div class="transit-item">
+        <div class="name">Jupiter 8-13&deg; Leo - closing in on natal Ascendant</div>
+        <p>Jupiter continues its slow approach. By end of August it is within 4&deg; of her natal Ascendant. The conjunction is exact mid-September - but the orb is closing fast. <strong>Anything she puts in motion in August has Jupiter's expansion behind it.</strong> Plant seeds now; she'll harvest them through 2027.</p>
+      </div>
+    </div>
+
+    <div class="duo">
+      <div class="col lean">
+        <h5>Lean into in August</h5>
+        <ul>
+          <li>8 August - plan a visible moment, the Sun is on her Ascendant</li>
+          <li>12 August New Moon - write the soul-list for the next 12 months</li>
+          <li>17 August - watch for desire signals, self-worth recalibration</li>
+          <li>28-30 August - take the action she's been deferring, vitality is peak</li>
+          <li>Body movement, physical creation, things-made-with-hands</li>
+        </ul>
+      </div>
+      <div class="col patient">
+        <h5>Be patient with in August</h5>
+        <ul>
+          <li>Mars-Venus / Mars-Sun spikes of irritation - they're recalibrating standards</li>
+          <li>The pull to over-do because energy is so available - Generators still need to respond, not push</li>
+          <li>End-of-month tiredness from the conjunction peak - she'll need rest after Mars-Sun exact</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="card" id="september" style="background:var(--paper);">
+    <span class="section-num">12 &middot; Transits</span>
+    <h2>Early September 2026 - Jupiter on her Ascendant</h2>
+
+    <p class="lede">The first week of September is the final stretch before her solar return on 18 September and before Jupiter exact-conjuncts her Ascendant in mid-September. These ten days are the threshold - everything from June 6 onward has been preparing her to walk through it.</p>
+
+    <div class="transit-month">
+      <h3>Most significant transits <span class="tag">1 - 6 September</span></h3>
+
+      <div class="transit-item">
+        <div class="name">Jupiter 14-15&deg; Leo - within 2&deg; of natal Ascendant</div>
+        <p>Jupiter sits within 2&deg; of her natal Ascendant through the first week of September, building toward exact conjunction around mid-month. <strong>This is the climax of the whole window.</strong> Twelve years of identity gestation crystallising into who she is now becoming. The "felt sense" of this transit is bigger-ness - more space inside the self, more willingness to be seen, more permission to want. The discomfort is the Virgo Sun trying to shrink it back. The work is to stay in the expansion.</p>
+      </div>
+
+      <div class="transit-item">
+        <div class="name">Sun conjunct natal Venus - around 9-10 September</div>
+        <p>The Sun reaches her natal Venus at 17&deg; Virgo right after this window closes. Self-worth and relationship-with-resources gets a fresh annual download. Watch for clarity around money, beauty, what she actually values - the year ahead is built on whatever she names true at this moment.</p>
+      </div>
+
+      <div class="transit-item">
+        <div class="name">Mercury in Virgo - direct and supportive</div>
+        <p>Mercury moves through Virgo through early September, supporting clear thinking, list-making, planning. After two months of Leo expressiveness, this is the integration phase - she can now write down what she wants and structure it into actual steps. <strong>Use this window to put the August vision on paper.</strong></p>
+      </div>
+
+      <div class="transit-item">
+        <div class="name">Saturn at 10-11&deg; Aries retrograde - still on her North Node by square</div>
+        <p>Saturn continues retrograde through Aries, sustaining the soul-path quality control. By early September it has backed off slightly from the exact square to her NN, easing the pressure. The lessons of June-August are now being integrated rather than tested. <em>This is the breathe-out phase of the Saturn pressure.</em></p>
+      </div>
+
+      <div class="transit-item">
+        <div class="name">Solar Return preparation - birthday 18 September</div>
+        <p>Just outside this window but worth flagging now: her solar return chart is set on her birthday (18 September) and runs for twelve months. The chart for that return will be unusually loaded - Jupiter exactly on her Ascendant, Saturn squaring her North Node, Neptune still working her 4th House. <strong>Intentions named in the first week of September carry into the return chart.</strong> Recommend she write three things by 12 September: what she wants the year to be about, what she's leaving behind, who she's becoming. These should not be goals - they should be soul-level commitments.</p>
+      </div>
+
+      <div class="transit-item">
+        <div class="name">Mars at 25-29&deg; Virgo - completing the journey through her Sun</div>
+        <p>Mars finishes its walk through Virgo and approaches Libra by mid-September. Through early September Mars is still close to her natal Sun, sustaining the vitality wave. By the time it enters Libra (around 22 September) she'll feel the gear-change - action moves from internal/identity (Virgo) to communication/relating (Libra, her 3rd House).</p>
+      </div>
+    </div>
+
+    <div class="duo">
+      <div class="col lean">
+        <h5>Lean into 1-6 September</h5>
+        <ul>
+          <li>Writing the three soul-commitments for the year ahead</li>
+          <li>Letting Jupiter's expansion be felt without forcing it into a goal</li>
+          <li>One conversation that names where she is now (not where she was)</li>
+          <li>Rest before her birthday - the solar return is heavy energy</li>
+        </ul>
+      </div>
+      <div class="col patient">
+        <h5>Be patient with 1-6 September</h5>
+        <ul>
+          <li>The Virgo Sun's instinct to shrink Jupiter's expansion back to "useful"</li>
+          <li>Solar return pre-birthday fatigue - it's normal and seasonal</li>
+          <li>Wanting the Jupiter-ASC conjunction to deliver something dramatic - it usually delivers something quiet but permanent</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="card" id="integration">
+    <span class="section-num">13 &middot; Integration</span>
+    <h2>The three-month arc - one paragraph</h2>
+
+    <p class="lede">June ends a twelve-year emotional cycle. July begins a twelve-year identity cycle. August walks her into peak vitality. Early September delivers her to her solar return as someone she has not been before.</p>
+
+    <p>The story across these twelve weeks is the migration from Capricorn South Node (perform-to-be-loved, achievement-as-identity) into Cancer North Node (be-loved-as-you-are, belonging-as-identity). The transits are arranging the conditions: Jupiter's trine to her Moon in mid-June opens the emotional container; Jupiter's ingress into Leo on 30 June begins the identity expansion; Mars through July and August gives her the body energy to do the work; the New Moon in Leo on 12 August lets her seed the year ahead; Mars conjunct her Sun on 28-30 August delivers peak vitality; Jupiter approaches exact conjunction to her Ascendant in mid-September as the solar return chart locks in.</p>
+
+    <p>None of this is theoretical. It will show up as: <em>a person she didn't expect to be close to becoming someone she trusts. A conversation that finally goes somewhere. A career signal that she chooses to follow instead of dismissing. A boundary with family that she stops apologising for. A morning in August where she wakes up and the weight feels different. A photograph taken in early September where the woman in it is not who she was in June.</em></p>
+
+    <h3>Key dates at a glance</h3>
+    <ul>
+      <li><strong>12-15 June</strong> - Jupiter trine natal Moon exact - the headline emotional opening of the window</li>
+      <li><strong>17 June</strong> - Mars enters Leo, body wakes up</li>
+      <li><strong>30 June</strong> - Jupiter ingresses Leo, 12-year identity expansion begins</li>
+      <li><strong>13 July</strong> - Saturn stations retrograde, soul-path quality control begins</li>
+      <li><strong>23 July</strong> - Sun enters Leo, visibility window opens</li>
+      <li><strong>6 August</strong> - Mars enters Virgo, execution mode</li>
+      <li><strong>8 August</strong> - Sun conjunct her Ascendant, most-seen day of the year</li>
+      <li><strong>12 August</strong> - New Moon in Leo near Ascendant, personal new-year seed</li>
+      <li><strong>17 August</strong> - Mars conjunct natal Venus, self-worth recalibration</li>
+      <li><strong>23 August</strong> - Sun ingresses Virgo, solar return season opens</li>
+      <li><strong>28-30 August</strong> - Mars conjunct natal Sun, peak vitality</li>
+      <li><strong>1-6 September</strong> - Jupiter approaches her Ascendant, the threshold</li>
+    </ul>
+
+    <div class="callout">
+      <strong>The session anchor - if Felicity remembers one thing</strong>
+      "You are not behind. You are not broken. You are a 1/3 Generator with a Splenic Authority and a soul path toward community - which means everything that has felt like trial and error has been the actual work, and the people you have been waiting for are arriving on the timeline you keep trying to rush."
+    </div>
+
+    <h3>Kelly's session structure suggestion</h3>
+    <ol>
+      <li><strong>Open with the core signature</strong> - Sun, Moon, Rising, HD type. Anchor her in the framework before going deep.</li>
+      <li><strong>Name the gap between Leo Rising and Scorpio Moon</strong> early. This will land immediately and create permission for the rest of the session.</li>
+      <li><strong>Walk her through the 1/3 reframe.</strong> This is probably the most healing single thing she will hear today.</li>
+      <li><strong>Then go into the questions she brought</strong> - career, ADHD, family, husband, daughter - using the chart sections above as reference.</li>
+      <li><strong>Close with the three-month forecast</strong> as her practical map forward - not as prediction, as <em>permission to trust what's already moving.</em></li>
+    </ol>
+
+    <div class="kelly-note">
+      <span class="tag">Final note to Kelly</span>
+      <p>This chart wants to be held by someone who can see the depth and not be scared of it. That is your gift in this session. Do not soften the truth to make her comfortable - she has been softened-to her whole life. She came to you because she is ready to be met. Meet her.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="brand">Spiritual Badass Academy</div>
+    <div>VIP Session Pack &middot; Felicity Sharpley &middot; Prepared 25 May 2026</div>
+  </footer>
+
+  </main>
+</div>
+</body>
+</html>

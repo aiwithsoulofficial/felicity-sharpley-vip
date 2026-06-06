@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ava Sharpley - Human Design | Kelly's Notes for Felicity's Session</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --forest: #1E3329;
+  --forest2: #2D4A3E;
+  --terra: #B85838;
+  --terra-soft: #C97B5A;
+  --gold: #B8945A;
+  --cream: #FBF6EC;
+  --cream-warm: #F5EDDB;
+  --paper: #FDFAF3;
+  --ink: #1F2622;
+  --ink-soft: #3F4943;
+  --muted: #6B7570;
+  --rule: #E4D9C2;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: var(--paper); color: var(--ink); font-size: 18px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 240px 1fr; gap: 56px; padding: 48px 40px 120px; }
+@media (max-width: 900px) { .wrap { grid-template-columns: 1fr; gap: 24px; padding: 24px 20px 80px; } nav.toc { position: static !important; max-height: none !important; } }
+.hero { grid-column: 1 / -1; background: linear-gradient(135deg, var(--forest) 0%, var(--forest2) 100%); color: var(--cream); padding: 64px 56px; border-radius: 4px; margin-bottom: 32px; position: relative; overflow: hidden; }
+.hero::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 80% 20%, rgba(184,148,90,0.18), transparent 50%); pointer-events: none; }
+.hero .eyebrow { font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+.hero h1 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(36px, 5vw, 56px); line-height: 1.05; margin-bottom: 12px; letter-spacing: -0.01em; }
+.hero h1 em { color: var(--terra-soft); font-style: italic; }
+.hero .sub { font-size: 17px; color: rgba(251,246,236,0.82); max-width: 640px; line-height: 1.6; }
+.hero .meta { margin-top: 28px; display: flex; gap: 28px; flex-wrap: wrap; font-size: 13px; color: rgba(251,246,236,0.7); letter-spacing: 0.06em; text-transform: uppercase; }
+@media (max-width: 700px) { .hero { padding: 40px 28px; } }
+nav.toc { position: sticky; top: 24px; align-self: start; max-height: calc(100vh - 48px); overflow-y: auto; font-size: 13px; line-height: 1.5; padding-right: 8px; }
+nav.toc h4 { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; font-weight: 500; }
+nav.toc ol { list-style: none; counter-reset: toc; }
+nav.toc li { counter-increment: toc; margin-bottom: 10px; }
+nav.toc a { color: var(--ink-soft); text-decoration: none; display: block; padding: 4px 0; transition: color .15s; }
+nav.toc a::before { content: counter(toc, decimal-leading-zero) "  "; color: var(--gold); font-variant-numeric: tabular-nums; margin-right: 4px; }
+nav.toc a:hover { color: var(--terra); }
+main { min-width: 0; }
+section.card { background: var(--cream); border: 1px solid var(--rule); padding: 44px 52px; margin-bottom: 32px; border-radius: 4px; }
+@media (max-width: 700px) { section.card { padding: 28px 22px; } }
+section h2 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: clamp(28px, 3.5vw, 36px); line-height: 1.15; color: var(--forest); margin-bottom: 8px; letter-spacing: -0.005em; }
+section .section-num { font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--terra); margin-bottom: 20px; display: block; }
+section h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 24px; color: var(--forest2); margin-top: 36px; margin-bottom: 12px; }
+section h4 { font-weight: 600; font-size: 15px; color: var(--terra); margin-top: 24px; margin-bottom: 8px; letter-spacing: 0.02em; }
+section p { margin-bottom: 18px; color: var(--ink); }
+section em { color: var(--ink-soft); }
+section strong { color: var(--forest); font-weight: 600; }
+section ul, section ol { margin: 0 0 20px 22px; padding-left: 0; }
+section li { margin-bottom: 10px; padding-left: 6px; }
+section li::marker { color: var(--terra); }
+.quickref { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 18px; margin: 24px 0 8px; }
+.quickref .item { background: var(--paper); padding: 18px 20px; border-left: 3px solid var(--terra); border-radius: 2px; }
+.quickref .label { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.quickref .value { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--forest); line-height: 1.2; }
+.callout { background: var(--cream-warm); border-left: 4px solid var(--gold); padding: 20px 26px; margin: 24px 0; font-family: 'Cormorant Garamond', serif; font-size: 20px; line-height: 1.5; font-style: italic; color: var(--forest); }
+.callout strong { font-style: normal; color: var(--terra); display: block; font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 8px; }
+.kelly-note { background: #FFF9EE; border: 1px solid var(--gold); border-radius: 4px; padding: 18px 22px; margin: 20px 0; }
+.kelly-note .tag { font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--terra); font-weight: 600; margin-bottom: 6px; display: block; }
+.kelly-note p { font-size: 16px; margin-bottom: 0; color: var(--ink-soft); }
+.warning { background: #FBF1EC; border-left: 4px solid var(--terra); padding: 16px 22px; margin: 20px 0; font-size: 15px; color: var(--ink-soft); }
+.centres { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 24px 0; }
+.centre { padding: 14px 18px; border-radius: 3px; border: 1px solid var(--rule); }
+.centre.defined { background: var(--forest); color: var(--cream); border-color: var(--forest); }
+.centre.open { background: var(--paper); color: var(--ink-soft); }
+.centre .name { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 19px; margin-bottom: 4px; }
+.centre.defined .name { color: var(--cream); }
+.centre.open .name { color: var(--forest); }
+.centre .state { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; opacity: .7; }
+.duo { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 24px 0; }
+@media (max-width: 600px) { .duo { grid-template-columns: 1fr; } }
+.duo .col { background: var(--paper); padding: 22px 24px; border-radius: 3px; }
+.duo .col h5 { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 12px; }
+.duo .green h5 { color: var(--forest); }
+.duo .red h5 { color: var(--terra); }
+.duo ul { margin: 0; }
+.duo li { font-size: 15px; color: var(--ink-soft); }
+.channels { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 24px 0; }
+.channel { background: var(--paper); border-left: 4px solid var(--gold); padding: 18px 22px; border-radius: 3px; }
+.channel .label { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--terra); margin-bottom: 4px; }
+.channel .title { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--forest); margin-bottom: 8px; }
+footer { grid-column: 1 / -1; text-align: center; margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--muted); letter-spacing: 0.04em; }
+footer .brand { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--forest); font-style: italic; margin-bottom: 6px; }
+.lede { font-family: 'Cormorant Garamond', serif; font-size: 22px; line-height: 1.5; color: var(--forest2); font-style: italic; margin-bottom: 24px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">VIP Session Supplement &middot; Daughter Context</div>
+    <h1>Ava <em>Sharpley</em></h1>
+    <div class="sub">Human Design chart and parenting framework. Kelly's preparation notes for Felicity's session - the working document on Ava's design so Felicity can understand why standard parenting / schooling / managing-her approaches don't fit and what does.</div>
+    <div class="meta">
+      <span>Born 18 Dec 2010, 7:43pm</span>
+      <span>Toowoomba QLD</span>
+      <span>Projector &middot; 4/1 &middot; Emotional Authority</span>
+    </div>
+  </header>
+
+  <nav class="toc">
+    <h4>Contents</h4>
+    <ol>
+      <li><a href="#quickref">Quick reference</a></li>
+      <li><a href="#projector">She's a Projector</a></li>
+      <li><a href="#authority">Emotional Authority - the wave</a></li>
+      <li><a href="#centres">The nine centres</a></li>
+      <li><a href="#sacral">The undefined Sacral &amp; ADHD</a></li>
+      <li><a href="#profile">4/1 profile - Opportunist/Investigator</a></li>
+      <li><a href="#channels">Her three channels</a></li>
+      <li><a href="#body">Body wisdom &amp; chronic illness</a></li>
+      <li><a href="#felicity">Felicity &amp; Ava energetically</a></li>
+      <li><a href="#practical">Practical strategies</a></li>
+      <li><a href="#session">Talking points for the session</a></li>
+    </ol>
+  </nav>
+
+  <main>
+
+  <section class="card" id="quickref">
+    <span class="section-num">01 &middot; Quick Reference</span>
+    <h2>Ava at a glance</h2>
+    <p class="lede">Ava is a 4/1 Projector with Emotional Authority, five defined centres (G, Heart, Solar Plexus, Spleen, Root) and three defined channels. She has her own emotional weather, her own willpower, her own body intuition. She is grounded, not absorbent. But she is NOT energetically built for sustained Generator-style output.</p>
+
+    <div class="quickref">
+      <div class="item"><div class="label">Type</div><div class="value">Projector</div><div style="font-size:13px;color:var(--muted);margin-top:4px">Non-energy type</div></div>
+      <div class="item"><div class="label">Strategy</div><div class="value">Wait for Invitation</div><div style="font-size:13px;color:var(--muted);margin-top:4px">Recognised first, then act</div></div>
+      <div class="item"><div class="label">Authority</div><div class="value">Emotional</div><div style="font-size:13px;color:var(--muted);margin-top:4px">Ride the wave</div></div>
+      <div class="item"><div class="label">Profile</div><div class="value">4 / 1</div><div style="font-size:13px;color:var(--muted);margin-top:4px">Opportunist / Investigator</div></div>
+      <div class="item"><div class="label">P Sun</div><div class="value">Gate 11.4</div><div style="font-size:13px;color:var(--muted);margin-top:4px">Peace / The Idealist</div></div>
+      <div class="item"><div class="label">D Sun</div><div class="value">Gate 46.1</div><div style="font-size:13px;color:var(--muted);margin-top:4px">Love of the Body</div></div>
+      <div class="item"><div class="label">Defined</div><div class="value">5 centres</div><div style="font-size:13px;color:var(--muted);margin-top:4px">G, Heart, SP, Spleen, Root</div></div>
+      <div class="item"><div class="label">Channels</div><div class="value">10-57 &middot; 18-58 &middot; 37-40</div><div style="font-size:13px;color:var(--muted);margin-top:4px">Three definitions</div></div>
+    </div>
+
+    <div class="kelly-note">
+      <span class="tag">The three things Felicity most needs to hear</span>
+      <p>One: <strong>Ava is a Projector.</strong> She is not designed for sustained energy output. Push = damage; invitation = activation.<br>
+      Two: <strong>Ava is Emotional Authority.</strong> She must wait through her emotional wave before deciding anything important. "Sleep on it" is literal neuroscience for her, not a parenting nicety.<br>
+      Three: <strong>Ava's design echoes Felicity's in deep ways.</strong> Same active Gate 46 (love of body), same Gate 57 (intuitive clarity), shared Spleen activity. They are wired to recognise each other - even when it feels like they don't.</p>
+    </div>
+  </section>
+
+  <section class="card" id="projector">
+    <span class="section-num">02 &middot; Type</span>
+    <h2>What it means that she's a Projector</h2>
+
+    <p>Projectors are about 20% of the population. They are <strong>not energy beings</strong> - they do not have a defined Sacral (the energy motor) and they do not have consistent, daily, all-day energy to give. Their gift is <em>seeing others clearly</em> - they're the natural guides, advisors, and noticers. The system has to be built around their energy reality, not the other way around.</p>
+
+    <h3>Strategy: Wait for the Invitation</h3>
+    <p>Projectors live and die by recognition. When a Projector is recognised and invited, their energy comes through clean and they can pour into the thing for hours. When they are <em>not</em> recognised - when they have to push themselves into situations to be heard - they burn out, get bitter, and shut down.</p>
+
+    <p>For Ava specifically: <strong>she will perform when she feels seen, and disappear when she doesn't.</strong> School systems, peer groups, and family environments where she has to compete or push for attention are draining her at a physiological level - not just emotionally.</p>
+
+    <h3>The Projector with three motors</h3>
+    <p>Most Projectors have one or no motor centre. Ava has THREE motors defined: Heart, Solar Plexus, and Root. She is unusually well-resourced for a Projector. She has access to willpower (Heart), emotional drive (Solar Plexus), and adrenal pressure (Root). This means she has more "push energy" than a typical Projector - but it comes in <strong>bursts</strong>, not sustained output, because the Sacral (the long-burn engine) is still undefined.</p>
+
+    <p>This is a critical distinction: <em>she can do intense things for short windows. She cannot do sustained things across long days.</em> A 90-minute focused session is in her wheelhouse. A 6-hour school day is genuinely against her wiring.</p>
+
+    <h3>Energy reality</h3>
+    <ul>
+      <li><strong>She works in pulses.</strong> Bursts of focused engagement, then needs to retreat. This is normal for her design - not avoidance.</li>
+      <li><strong>She amplifies external Sacral energy.</strong> Open Sacral means she picks up and runs on other people's Sacral. In a classroom with 25 Generator children, she is being energetically blasted for six hours.</li>
+      <li><strong>She doesn't have a built-in "stop" signal.</strong> Without a defined Sacral she may push past her actual limit and crash hard, because her body doesn't have the same "I'm done" wisdom Generator children have.</li>
+      <li><strong>Alone time is medicine.</strong> She needs solitude to discharge what she has absorbed and re-find her own energy. If she doesn't get it, the next day she's anxious or "behaving badly." The fix is not discipline; it's decompression.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Re-frame for Felicity</strong>
+      Ava's tiredness, her overwhelm, her shutdowns are her body's correct response to being on the wrong timetable. She is not lazy or dramatic. She is a non-energy type running a Generator-shaped schedule.
+    </div>
+  </section>
+
+  <section class="card" id="authority">
+    <span class="section-num">03 &middot; Emotional Authority</span>
+    <h2>The wave - she has to ride it</h2>
+
+    <p class="lede">Of all the things to get right with Ava, this is the most important. Her Solar Plexus is defined - which means she has an emotional wave that goes up and down naturally over hours and days, and her truth is found across the whole wave, not in any single moment.</p>
+
+    <h3>How Emotional Authority works</h3>
+    <p>Defined Solar Plexus people have a built-in emotional cycle. It rises (hope, excitement, "yes"), it peaks, it falls (uncertainty, doubt, "no"), it bottoms, it rises again. The cycle is NORMAL and HEALTHY - not a problem to fix.</p>
+
+    <p>The truth about any decision is in the <strong>average across the wave</strong>, not in the peak or the trough. If Ava says yes at the top of her wave, she may regret it in the trough. If she says no in the trough, she may have closed something that her higher wave would have wanted.</p>
+
+    <h3>The rule: there is no truth in the now</h3>
+    <p>This is the opposite of Felicity's Splenic Authority (which IS truth in the now, the immediate body whisper). For Felicity, the first gut response is correct. <strong>For Ava, the first response is just the first data point</strong> - she needs the second, third, and fourth before she has the actual answer.</p>
+
+    <h3>Practical wave management</h3>
+    <ul>
+      <li><strong>Never demand immediate yes/no.</strong> "Sleep on it," "tell me tomorrow," "let's revisit Thursday" - these aren't stalling tactics. They are <em>literally how her authority works</em>.</li>
+      <li><strong>For sleepovers, parties, plans:</strong> 24-48 hours minimum before answer.</li>
+      <li><strong>For big things</strong> (school choices, friendship calls, commitments): a few days to a couple of weeks. Watch her across the wave.</li>
+      <li><strong>For tiny things</strong> (what to eat, what to wear): even a few minutes of "I don't know yet, let me think" honours her authority and builds the muscle.</li>
+      <li><strong>Watch where she is on the wave.</strong> Top: enthusiastic, optimistic, "yes to everything." Bottom: heavy, doubtful, "no to everything." Neither is the truth. The average is the truth.</li>
+      <li><strong>Teach her to NAME her wave position.</strong> "Are you at the top, the bottom, or somewhere in the middle right now?" This is one of the most empowering questions she can learn to ask herself - it makes her own internal weather visible and manageable to her.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>The rule to give Felicity</strong>
+      Big decisions made by Ava in the heat of feeling - whether the heat is excitement or distress - are unreliable. Always give her time to ride the wave. Her clarity comes after the cycle, not during it.
+    </div>
+
+    <h3>What this means for ADHD and chronic illness</h3>
+    <ul>
+      <li><strong>Her emotional state affects her physical state directly</strong> - the wave is also a physical wave. Blood sugar, focus, energy, all move with the emotional cycle.</li>
+      <li><strong>Medication decisions should not be made at the top or bottom of her wave</strong>, where possible. The average is more reliable data.</li>
+      <li><strong>The "good day / bad day" pattern is built in</strong> - it is not a problem with the medication or the management plan, it is the wave.</li>
+      <li><strong>Teaching her to track the wave</strong> (a simple top/middle/bottom notation in a journal or her phone) is one of the most powerful self-awareness tools she can build before adulthood.</li>
+    </ul>
+
+    <div class="warning">
+      <strong>For teenage Ava specifically:</strong> Peer pressure decisions made at the top of her wave (high social moment, FOMO peak) will not align with what she actually wants. Equally, friendship break-ups initiated at the bottom of her wave often get reversed within days. The wave is real. Teach her this <em>now</em>, before she has a phone full of regrettable texts sent at the wrong wave position.
+    </div>
+  </section>
+
+  <section class="card" id="centres">
+    <span class="section-num">04 &middot; The Nine Centres</span>
+    <h2>Five defined, four open</h2>
+
+    <p>The defined centres are where Ava has consistent, fixed energy and themes she runs reliably from. The undefined centres are where she takes in and amplifies the energy of whoever is around her. Ava has FIVE centres defined - this means she has a substantial self of her own. She is not the empath sponge that highly open children are.</p>
+
+    <div class="centres">
+      <div class="centre defined"><div class="name">G Centre</div><div class="state">Defined &middot; Identity &amp; love</div></div>
+      <div class="centre defined"><div class="name">Heart</div><div class="state">Defined &middot; Willpower</div></div>
+      <div class="centre defined"><div class="name">Solar Plexus</div><div class="state">Defined &middot; Emotional wave</div></div>
+      <div class="centre defined"><div class="name">Spleen</div><div class="state">Defined &middot; Body intuition</div></div>
+      <div class="centre defined"><div class="name">Root</div><div class="state">Defined &middot; Pressure / drive</div></div>
+      <div class="centre open"><div class="name">Head</div><div class="state">Open &middot; Inspiration</div></div>
+      <div class="centre open"><div class="name">Ajna</div><div class="state">Open &middot; Thinking</div></div>
+      <div class="centre open"><div class="name">Throat</div><div class="state">Open &middot; Voice</div></div>
+      <div class="centre open"><div class="name">Sacral</div><div class="state">Open &middot; Life force</div></div>
+    </div>
+
+    <h3>The five defined - what runs reliably in her</h3>
+
+    <h4>G Centre (defined) - she knows who she is</h4>
+    <p>Her identity, direction, and capacity to love are stable. She has a fixed sense of self. When Ava says "I'm not that kind of person," she means it - it's coming from her own G, not from outside opinion. Felicity can trust this. Even at 15, Ava has access to a deep "this is me, this is not me" knowing.</p>
+
+    <h4>Heart Centre (defined) - she has access to willpower</h4>
+    <p>Willpower in bursts. When Ava decides she will do something, she can - but only when SHE decides. Heart energy doesn't respond well to "you should" or "you have to" from outside. It runs on inner commitment. The teenager who suddenly cleans her room out of nowhere because she <em>decided</em> to is the defined Heart in action. The same teenager who refuses to do a task someone else demanded is also the defined Heart. Same mechanism.</p>
+
+    <h4>Solar Plexus (defined) - her emotional weather is HERS</h4>
+    <p>Major reframe needed here for Felicity if she's been told Ava is "absorbing her emotions." She isn't. Ava generates her OWN emotional cycle. When she's at the bottom, it's HER bottom, not her mother's grief leaking in. When she's high, it's HER joy. This is freeing for both of them - Felicity is not responsible for Ava's moods, and Ava's emotions are not her mother's emotions in disguise. (Section 9 covers this dynamic in detail.)</p>
+
+    <h4>Spleen (defined) - body intuition is online</h4>
+    <p>She has in-the-moment body wisdom around safety, food, people, energy. This is the same authority her mum runs. But Ava's primary authority is EMOTIONAL, not Splenic - so the Spleen for her is a secondary information system. Useful, real, but the Emotional wave overrides it for decisions.</p>
+
+    <h4>Root (defined) - she has her own pressure</h4>
+    <p>Adrenal pressure, drive to act, the "I need to get this done" feeling - these are hers, not borrowed. This is part of why she has more push capacity than a typical Projector. The shadow is anxiety that has a real adrenal driver - it's not all in her head; her body genuinely runs pressure. Movement, somatic discharge, physical activity all help.</p>
+
+    <h3>The four open - what she takes in</h3>
+
+    <h4>Head (open) - she absorbs mental pressure</h4>
+    <p>The Head centre runs inspiration and mental pressure. Open means she takes in everyone else's questions, ideas, and "what about" energy. She can feel mentally overwhelmed by other people's curiosity or anxiety. The fix: question whether the question she's stressing about is even hers.</p>
+
+    <h4>Ajna (open) - she takes in others' thinking</h4>
+    <p>Her thinking is flexible and shifts with the people around her. She can hold multiple perspectives, doubt her own conclusions, and absorb others' certainty as if it were her own. This is a gift - she's not dogmatic - but it can also make her vulnerable to manipulation by certain teachers, friends, or influencers. The work: noticing whose voice she's thinking in.</p>
+
+    <h4>Throat (open) - her voice activates when invited</h4>
+    <p>Open Throat children have voices that come alive in response to invitation, attention, or recognition - not on demand. Asking Ava to "tell me what happened at school" cold may produce silence. Sitting quietly with her in the right moment often produces a flood of words. The voice arrives when the conditions are right, not when summoned.</p>
+
+    <h4>Sacral (open) - she has no built-in long-burn engine</h4>
+    <p>This is the energy reality that makes her a Projector. Section 5 covers this in detail.</p>
+  </section>
+
+  <section class="card" id="sacral">
+    <span class="section-num">05 &middot; Open Sacral &amp; ADHD</span>
+    <h2>The undefined Sacral - why school is so hard</h2>
+
+    <p class="lede">An undefined Sacral child in a classroom of Generators is being energetically swamped for six hours a day. She is running on borrowed energy and she is wired-but-exhausted by 3pm.</p>
+
+    <h3>What the undefined Sacral does</h3>
+    <ul>
+      <li><strong>Takes in others' Sacral energy and amplifies it.</strong> Around hyper children she becomes hyper. Around calm adults she becomes calmer.</li>
+      <li><strong>Does not have its own sustainable engine.</strong> She "borrows" energy by being near Generators - then runs out fast in solitude.</li>
+      <li><strong>Does not know when to stop.</strong> Without a defined Sacral she lacks the clear "I'm done" body signal Generator children have. She can push past her actual limit, then crash hard.</li>
+      <li><strong>Often presents as ADHD when partly amplified open Sacral.</strong> The ADHD diagnosis may be entirely correct - and on top of an open Sacral, the energetic picture is harder than diagnosis alone suggests.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>What this means for school</strong>
+      Six hours in a classroom of 25 Generators is, energetically, an adult sitting in a busy open-plan office while seven conversations happen simultaneously. The adult can leave at 5pm. Ava cannot. She comes home running on a system that's been wired hot for six hours.
+    </div>
+
+    <h3>Concrete fixes for the absorption pattern</h3>
+    <ul>
+      <li><strong>Decompression time after school is non-negotiable.</strong> Not screen time. Not homework. Quiet alone time. 30-60 minutes minimum. Lets her nervous system down-regulate before any new input.</li>
+      <li><strong>Watch her energy state, not her behaviour.</strong> "Bad behaviour" at 4pm is often amplified-Sacral overload. The intervention is rest and quiet, not consequence.</li>
+      <li><strong>Limit overlapping environments.</strong> School + after-school activity + busy family evening = three environments in one day. She will collapse. Pick one bonus environment per day.</li>
+      <li><strong>Sleep is medicine.</strong> Open Sacral children genuinely need more sleep than peers. Defended bedtimes are not strict parenting - they're life support.</li>
+      <li><strong>Name whose energy she's carrying.</strong> "You're bringing Ms X's stress home with you" starts to free her from absorbed states she didn't know weren't hers.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="profile">
+    <span class="section-num">06 &middot; Profile 4/1</span>
+    <h2>Opportunist / Investigator - foundation and friendship</h2>
+
+    <p class="lede">Ava is a 4/1 - one of the most stable, "fixed" profiles in Human Design. She is not the experimenter (her mum's 3rd line). She is not the projection magnet (the 5th line). She is the one with deep roots, a loyal network, and a need to understand things from the foundation up.</p>
+
+    <h3>Line 4 (conscious) - The Opportunist</h3>
+    <p>The 4th line is fundamentally <strong>relational</strong>. Ava's life moves through her network. Opportunities come through people who know her. Trust is built slowly and loyalty is fierce. Friendships are the architecture of her life, not the decoration.</p>
+
+    <p>Practically, this means:</p>
+    <ul>
+      <li>She will form a small number of <strong>deep</strong> friendships rather than many surface ones</li>
+      <li>Losing a close friendship feels catastrophic because friendships are infrastructure for her</li>
+      <li>She <em>tells</em> her close people what she's thinking before she does anything else - her thinking is processed through her circle</li>
+      <li>School transitions, new groups, moving environments are particularly hard - she loses her infrastructure</li>
+      <li>She is <strong>profoundly loyal</strong> - to friends, to family, to ideas she's bonded with</li>
+      <li>Influence flows through her trusted people. She is more likely to take guidance from a friend than from an authority figure</li>
+    </ul>
+
+    <h3>Line 1 (unconscious) - The Investigator</h3>
+    <p>The 1st line needs <strong>foundation</strong>. Knowledge. Research. Understanding from the bottom up before she can feel secure. Without foundation she will feel anxious in a way that nothing else fixes - because the anxiety is foundation-deficit, not regulation-deficit.</p>
+
+    <p>Practically:</p>
+    <ul>
+      <li>She wants to <em>understand</em> things before she trusts them - "why do I need to do this?" is a legitimate need, not defiance</li>
+      <li>She is naturally inclined to research, study, deep dives</li>
+      <li>For medical management: explain the WHY, not just the WHAT. She will adhere far better when she understands the mechanism.</li>
+      <li>She may seem to "over-prepare" or "over-think" before doing things. This is her line 1 looking for the floor before stepping forward.</li>
+      <li>She struggles when foundations beneath her are unstable - school changes, family changes, medication changes - all hit her 1st line harder than most kids</li>
+    </ul>
+
+    <h3>4/1 together</h3>
+    <p>Stable, loyal, foundation-needing, network-driven. This is the kid who will be the lifelong friend, the deep researcher, the one who knows things others don't because she investigated. She will appear "old soul" - because she is one. 4/1 children often seem more mature than their peers because they are running on foundation and network rather than experimentation.</p>
+
+    <div class="callout">
+      <strong>4/1 superpower</strong>
+      4/1s become the people others come to because they have the knowledge AND the network. Trust, expertise, and relationships compound for her over years. By her late 20s she will likely be the person her circle goes to for solid information - because she did the research and stayed loyal long enough to be trusted.
+    </div>
+
+    <h3>What 4/1 needs from parenting</h3>
+    <ul>
+      <li><strong>Honour the friendships.</strong> Her close people are not optional. They are infrastructure. Don't dismiss social pain as "drama" - friendship is her operating system.</li>
+      <li><strong>Explain the why.</strong> For everything from medication to school rules to family decisions. The line 1 needs foundation.</li>
+      <li><strong>Don't move her around unnecessarily.</strong> Disrupted networks and changing environments hit her harder than other temperaments.</li>
+      <li><strong>Give her time to research.</strong> When she's into something, let her go deep. The investigation is how she finds her ground.</li>
+      <li><strong>Be careful about who you let into her circle.</strong> Her 4th line means people who get close to her will influence her - choose carefully which adults you give access.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="channels">
+    <span class="section-num">07 &middot; Her Three Channels</span>
+    <h2>The three defined themes she runs reliably</h2>
+
+    <p>Channels are the fixed energetic themes Ava lives. They are reliable. They are hers. They are how she expresses her self in the world.</p>
+
+    <div class="channels">
+      <div class="channel">
+        <div class="label">Channel 10 - 57 &middot; G to Spleen</div>
+        <div class="title">The Channel of Perfected Form</div>
+        <p>Love of the body + intuitive clarity. The body-wisdom channel. Gate 10 (love of body) connects to Gate 57 (the highest frequency of body intuition in the system). Together: <strong>"my body is intelligent, and my body knows."</strong></p>
+        <p>For a chronic-illness child this is gold. She has innate body intuition. She can be taught from a young age to read her own energy, blood sugar feel, food reactions, medication responses, emotional state - all from body signals. The risk: medical management that overrides her body wisdom teaches her to stop trusting it. The art: use both medical data AND her body knowing as parallel information streams.</p>
+      </div>
+
+      <div class="channel">
+        <div class="label">Channel 18 - 58 &middot; Spleen to Root</div>
+        <div class="title">The Channel of Judgment (Joy of Correction)</div>
+        <p>The gate of "what's wrong with this picture" + the drive to be alive and fix things. This is the channel that <strong>notices what's off</strong>. She can spot patterns, errors, things that aren't right - in herself, in others, in systems.</p>
+        <p>The gift: she will be a profound corrector and improver. She sees what others miss. The shadow: chronic dissatisfaction, self-criticism, or being seen as critical by others when she's actually just being accurate. Felicity should help her learn to <em>direct</em> this energy at things that can actually be improved, and away from people who don't need her correction.</p>
+      </div>
+
+      <div class="channel">
+        <div class="label">Channel 37 - 40 &middot; Solar Plexus to Heart</div>
+        <div class="title">The Channel of Community (The Bargain)</div>
+        <p>The community-making channel. Gate 37 (family, bargains) connects Gate 40 (deliverance, the will to belong). This is the channel of <strong>chosen family, agreements, deals</strong>. She forms her circles, her tribe, her people through emotional bonds AND explicit agreements about what each member contributes.</p>
+        <p>Practically: she may be the kid who makes friendship pacts, sets up rules, organises the group. Loyalty bonds are formed through both feeling and explicit promise. The shadow: she may be drawn into bad bargains - friendships, relationships, work arrangements where she's giving more than she's getting because she committed when the emotional wave was at the top. Emotional Authority is her protection here.</p>
+      </div>
+    </div>
+
+    <h3>The pattern across her three channels</h3>
+    <p>All three channels involve the Spleen, the Solar Plexus, or both. <strong>Body knowing, emotional truth, and the urge to correct/improve are her core operating modes.</strong> She is wired to feel, to know, and to fix. When she's healthy: she's a body-wise, emotionally honest improver of things. When she's stuck: she's anxious, critical, and emotionally swamped.</p>
+  </section>
+
+  <section class="card" id="body">
+    <span class="section-num">08 &middot; Body Wisdom &amp; Chronic Illness</span>
+    <h2>Working with her design medically</h2>
+
+    <p>This is the section to spend real time on with Felicity. Ava's chart is unusually well-suited to managing chronic illness <em>if</em> the system around her honours her design instead of overriding it.</p>
+
+    <h3>The energy reality of a Projector with diabetes</h3>
+    <p>Projectors run lower baseline energy than Generators. Add diabetes management - constant monitoring, decisions, blood sugar fluctuating mood and focus - and the energy demand on Ava is significant. She is doing more cognitive and emotional work per day than her Generator peers, with less inherent energy. <strong>Her tiredness is real and disproportionate.</strong> Comparing her output to her classmates is a category error.</p>
+
+    <h3>The ADHD-and-Projector overlap</h3>
+    <ul>
+      <li>"Hyperfocus" is actually a Projector strength - deep focused engagement when properly invited or interested</li>
+      <li>"Can't get started" is often a Projector waiting (correctly) for the right entry point - then being told she's "lazy" for waiting</li>
+      <li>Stimulant medication can help, but doesn't fix the Projector energy reality - it can let her push through when her design says rest, leading to crashes</li>
+      <li>School schedules built around constant low-grade attention (Generator-friendly) are particularly hostile to her wiring</li>
+    </ul>
+
+    <h3>The 10-57 channel is her superpower for both diagnoses</h3>
+    <p>She has the highest body-intuition channel in the HD system. Teach her to read her body:</p>
+    <ul>
+      <li><strong>Daily "how does your body feel?" check-ins</strong> - not treatment-related, just curiosity</li>
+      <li><strong>Name the difference</strong> between hungry, low-blood-sugar, anxious, tired - she will distinguish these faster than peers if coached</li>
+      <li><strong>Let her body data sit alongside the device data.</strong> When they confirm each other, both win. When they diverge, that's worth investigating - not dismissing her body as "wrong"</li>
+      <li><strong>Movement she chooses, not movement prescribed</strong> - swimming, walking, climbing, dance. Her G+Spleen wants embodied freedom, not exercise plans</li>
+    </ul>
+
+    <div class="callout">
+      <strong>The framing to give Felicity</strong>
+      "Ava's body is one of the most intelligent things she has. The diabetes and the ADHD are not signs that her body is broken - they are signs that her body is working hard, and her design is wired with built-in body intelligence to manage exactly this kind of complexity. Help her trust it."
+    </div>
+
+    <h3>What to advocate for at school</h3>
+    <ul>
+      <li><strong>Modified school day where possible.</strong> Even one half-day or one late-start per week makes a measurable difference for a Projector child.</li>
+      <li><strong>Real movement breaks</strong> - not "five minutes of mindfulness," actual physical decompression and solitude.</li>
+      <li><strong>Trusting her body signals around food and medication.</strong> Her 10-57 channel makes body literacy a strength. Honour it.</li>
+      <li><strong>Sleep as medical intervention</strong> - Projector + chronic illness combination needs more sleep than typical guidelines.</li>
+      <li><strong>For the 1st line:</strong> explain the why behind every accommodation. She will engage far more when she understands the mechanism.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="felicity">
+    <span class="section-num">09 &middot; Felicity &amp; Ava Energetically</span>
+    <h2>Mother-daughter dynamic - the resonance and the difference</h2>
+
+    <h3>What they share</h3>
+    <ul>
+      <li><strong>Gate 46 active in both.</strong> Felicity has Gate 46 as her Personality Sun (conscious identity). Ava has Gate 46 as her Design Sun (unconscious foundation). This gate is <em>"love of the body, being in the right place at the right time."</em> They share the same body-wisdom orientation at the deepest level - even when life makes them feel disconnected from their bodies. This is a profound mother-daughter resonance.</li>
+      <li><strong>Gate 57 in both charts.</strong> The highest-frequency intuition gate. They both read situations through quiet body knowing. They can recognise this in each other.</li>
+      <li><strong>Splenic activity in both.</strong> Felicity has Gate 57 + the 34-57 channel; Ava has Gate 57 + the 10-57 channel + the 18-58 channel. Both have defined Spleens. Both have body-knowing as a primary information stream.</li>
+      <li><strong>Line 1 in both profiles.</strong> Felicity is 1/3, Ava is 4/1. Both have the Investigator's need for foundation, research, "tell me why." Felicity will deeply understand this part of Ava.</li>
+      <li><strong>Emotional intensity in both.</strong> Felicity has Scorpio Moon in the 4th House (deep feeling, family-rooted). Ava has defined Solar Plexus with multiple gates (Gates 36, 30, 37 - desire, fire, family-bargain). Both feel deeply. Both will recognise this in each other.</li>
+    </ul>
+
+    <h3>Where they're different (and where Felicity needs to NOT parent like she would parent herself)</h3>
+    <ul>
+      <li><strong>Type differs. Felicity is a Generator. Ava is a Projector.</strong> Felicity's design says "respond to life, use your sustainable energy." Ava's design says "wait to be invited, conserve your energy in bursts." Pushing Ava to "use her energy" or "build stamina" is parenting her with Felicity's design, not Ava's.</li>
+      <li><strong>Authority differs. Felicity is Splenic. Ava is Emotional.</strong> This is the single biggest difference for parenting decisions. Felicity should trust her first gut whisper. Ava should NEVER make a decision in the heat of the moment - she needs the wave. If Felicity coaches Ava to "trust your gut right now," she is coaching the wrong authority. Ava needs to ride.</li>
+      <li><strong>Profile differs. Felicity is 1/3 (Investigator/Martyr - trial and error). Ava is 4/1 (Opportunist/Investigator - foundation and network).</strong> Felicity learns by bumping into things. Ava learns by researching, then committing through her trusted people. Ava is NOT designed to "experiment her way" to truth the way her mum is. Don't push her into trial-and-error she's not built for.</li>
+      <li><strong>Sacral status differs.</strong> Felicity has a defined Sacral (Generator engine, Gate 34 tripled). Ava has an open Sacral. Felicity's sustainable energy is alien to Ava's design. Expecting Ava-level output from a Generator-energy parent's frame is a mismatch.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>The most important sentence in this section</strong>
+      Felicity will be tempted to parent Ava the way she would have wanted to be parented herself. Some of that will be exactly right (the foundation, the explanation, the body-wisdom respect). Some will be exactly wrong (the timing of decisions, the energy expectations, the "trust your gut now"). Felicity needs to know which is which.
+    </div>
+
+    <h3>The leverage point</h3>
+    <p>Because they share so many gates and both have defined Spleens, Felicity teaching Ava to honour her body wisdom is also Felicity teaching herself the same. Their healing runs in parallel. Felicity's nervous system work is direct medicine for Ava - not because Ava is absorbing Felicity's state (she has her own defined Solar Plexus and isn't a sponge), but because Felicity is Ava's most influential person, and the version of Felicity that Ava grows up around is the model for what an adult version of the shared design looks like.</p>
+
+    <div class="kelly-note">
+      <span class="tag">For Felicity to hear directly</span>
+      <p>You and Ava are not the same person, but you are <em>related</em> at the deepest layer of design. You share gates that almost no other people in her life will share. When you trust your body, you give her permission. When you ride your own emotional weather without making it her responsibility, you teach her to ride hers. The work you are doing on yourself is the most important thing you are doing for her.</p>
+    </div>
+  </section>
+
+  <section class="card" id="practical">
+    <span class="section-num">10 &middot; Practical Strategies</span>
+    <h2>What Felicity can change this week</h2>
+
+    <h3>The decision-making rule</h3>
+    <ul>
+      <li><strong>No immediate yes/no on anything important.</strong> "Tell me tomorrow" / "let's revisit in a few days" - this is honouring her authority, not stalling.</li>
+      <li><strong>For requests Ava makes</strong> (sleepover, late night out, new commitment): let her sit with it across a wave too. Don't ask her to commit at the peak of excitement.</li>
+      <li><strong>Teach her the wave language.</strong> "Are you at the top, the middle, or the bottom right now?" - get her to name her own position.</li>
+    </ul>
+
+    <h3>Energy management</h3>
+    <ul>
+      <li>One non-negotiable hour of decompression after school - quiet, alone, no demands</li>
+      <li>Sleep extended by 30-60 minutes if at all possible - move bedtime forward, not wake time later</li>
+      <li>Audit her week: how many environments per day? Can one be removed?</li>
+      <li>Watch for the 4pm crash - feed her, give her quiet, don't introduce anything new</li>
+    </ul>
+
+    <h3>Foundation-first communication (her 1st line)</h3>
+    <ul>
+      <li>Explain WHY before WHAT. Every medication, every rule, every accommodation - tell her the mechanism.</li>
+      <li>Let her research things she's interested in deeply. The investigation builds her ground.</li>
+      <li>Avoid surprise transitions where possible - she needs lead time to find her footing.</li>
+    </ul>
+
+    <h3>Network protection (her 4th line)</h3>
+    <ul>
+      <li>Honour her close friendships as infrastructure, not decoration</li>
+      <li>Be careful about which adults you let close to her - they will influence her</li>
+      <li>When friendship pain shows up, treat it seriously - it is genuinely destabilising for a 4-line</li>
+      <li>Don't move her around unnecessarily - networks are slow to rebuild</li>
+    </ul>
+
+    <h3>The body work (her 10-57 channel)</h3>
+    <ul>
+      <li>"How does your body feel?" as a daily question, not a treatment-related one</li>
+      <li>Let her pick movement she actually wants - not prescribed exercise</li>
+      <li>Treat her food preferences as data alongside medical constraints, not as stubbornness</li>
+      <li>Use her body signals AS data alongside medical data, especially for blood sugar feel</li>
+    </ul>
+
+    <h3>The correction channel (18-58)</h3>
+    <ul>
+      <li>When she notices what's off, take her seriously - she sees what others miss</li>
+      <li>Help her direct her correction at things that can actually be fixed</li>
+      <li>Watch for the shadow: self-criticism, chronic dissatisfaction. Help her aim it outward at systems, not inward at herself</li>
+    </ul>
+
+    <h3>School advocacy</h3>
+    <ul>
+      <li>Request a quiet space option during the day - even 15 minutes</li>
+      <li>Ask teachers to <em>invite</em> participation rather than cold-call her (Projector + open Throat)</li>
+      <li>Frame for the school: "Ava works in focused bursts, not sustained output. Her best work comes from being recognised and invited."</li>
+      <li>Push for the WHY of any task to be explicit - her 1st line needs foundation</li>
+    </ul>
+  </section>
+
+  <section class="card" id="session">
+    <span class="section-num">11 &middot; Session Talking Points</span>
+    <h2>How to bring this into Felicity's reading</h2>
+
+    <p>You don't need to dump all eleven sections on Felicity. Pick the 3-5 that land hardest for her specific questions. Suggested order:</p>
+
+    <ol>
+      <li><strong>Lead with: "Ava is a Projector, not a Generator. That alone changes the parenting frame."</strong> This will be a big reframe - many ADHD parents have been told to "build her stamina" or "increase her engagement," which is the opposite of what a Projector needs.</li>
+      <li><strong>The Emotional Authority piece.</strong> This will land hard for Felicity, who is Splenic. "Your authority is the first gut whisper. Hers is the average across the wave. You cannot teach her your authority - it will harm her decisions." This may need real time to absorb.</li>
+      <li><strong>The shared gates.</strong> Especially Gate 46 in both charts (Felicity's Personality Sun = Ava's Design Sun). This is profound. Their bodies are wired in the same key. Felicity's body work is Ava's body work.</li>
+      <li><strong>The 10-57 channel as the gift inside the diagnoses.</strong> Frame the chronic illness AND the ADHD as conditions her chart is <em>well-suited to manage</em> if her body wisdom is honoured. This will land hard for a mother who has been managing crisis for years.</li>
+      <li><strong>The 4/1 stability reframe.</strong> Ava is not a fragile, projection-magnet child. She is a foundationed, networked, deeply rooted being. The teen years will be hard at the surface but she has internal architecture most kids don't.</li>
+    </ol>
+
+    <div class="callout">
+      <strong>The sentence that may unlock the room</strong>
+      "Ava is not designed to keep up. She is designed to see clearly. Everything you're trying to fix about her is actually her trying to tell you what she needs - in a body wired with one of the highest intuitive frequencies in the system."
+    </div>
+
+    <div class="kelly-note">
+      <span class="tag">Final note</span>
+      <p>This reading is partly for Ava and partly for Felicity. The shared design between them means Felicity reading Ava's chart is also Felicity reading herself - because the body-wisdom orientation, the Spleen-gates, and the line 1 foundation-need are in both of them. Hold this as a two-person reading even when only one person is in the room.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="brand">Spiritual Badass Academy</div>
+    <div>VIP Session Supplement &middot; Ava Sharpley Human Design &middot; Prepared 6 June 2026</div>
+  </footer>
+
+  </main>
+</div>
+</body>
+</html>
