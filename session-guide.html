@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Felicity - Clear the Gut, Free the Intuition</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --forest-deep: #1E3329;
+    --forest: #2D4A3E;
+    --terracotta: #C4663A;
+    --terracotta-dark: #A8522B;
+    --gold: #C9A96E;
+    --gold-soft: #d9bf8e;
+    --gold-pale: #ead9b5;
+    --cream-warm: #F5EDE0;
+    --cream-light: #FEFCF9;
+    --offwhite: #FAF6F1;
+    --charcoal: #2C2C2C;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--cream-light);
+    color: var(--charcoal);
+    line-height: 1.7;
+    font-size: 17px;
+  }
+  h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; letter-spacing: 0.01em; }
+
+  .hero {
+    background:
+      radial-gradient(circle at 20% 30%, rgba(201, 169, 110, 0.20) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(196, 102, 58, 0.14) 0%, transparent 55%),
+      linear-gradient(135deg, var(--forest-deep) 0%, var(--forest) 100%);
+    color: var(--cream-warm);
+    padding: 90px 40px 80px;
+    text-align: center;
+  }
+  .hero-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.35em;
+    font-size: 11px;
+    color: var(--gold);
+    margin-bottom: 30px;
+    font-weight: 500;
+  }
+  .hero h1 {
+    font-size: 60px;
+    font-weight: 400;
+    color: var(--cream-warm);
+    margin-bottom: 18px;
+    letter-spacing: 0.02em;
+  }
+  .hero-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--gold-soft);
+    margin-bottom: 16px;
+  }
+  .hero-meta {
+    font-size: 13px;
+    color: var(--gold-pale);
+    letter-spacing: 0.15em;
+  }
+  .signature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 24px;
+    max-width: 900px;
+    margin: 50px auto 0;
+    padding-top: 40px;
+    border-top: 1px solid rgba(201, 169, 110, 0.35);
+  }
+  .sig-item .sig-label {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 10px;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+  .sig-item .sig-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: var(--cream-warm);
+  }
+
+  .container { max-width: 780px; margin: 0 auto; padding: 0 32px; }
+  section { padding: 70px 0; }
+  section + section { border-top: 1px solid rgba(201, 169, 110, 0.25); }
+
+  .section-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 11px;
+    color: var(--terracotta);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  h2 { font-size: 38px; color: var(--forest-deep); margin-bottom: 24px; }
+  h3 { font-size: 25px; color: var(--forest); margin: 36px 0 14px; }
+  p { margin-bottom: 18px; }
+  em { color: var(--terracotta-dark); }
+
+  ul, ol { margin: 0 0 20px 22px; }
+  li { margin-bottom: 10px; }
+
+  .pullquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 26px;
+    line-height: 1.5;
+    color: var(--forest);
+    border-left: 3px solid var(--gold);
+    padding: 8px 0 8px 28px;
+    margin: 36px 0;
+  }
+
+  .card {
+    background: var(--offwhite);
+    border: 1px solid var(--gold-pale);
+    border-radius: 14px;
+    padding: 32px 34px;
+    margin: 28px 0;
+  }
+  .card h4 {
+    font-size: 21px;
+    color: var(--terracotta-dark);
+    margin-bottom: 12px;
+  }
+  .card p:last-child, .card ul:last-child, .card ol:last-child { margin-bottom: 0; }
+
+  .step-label {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--cream-light);
+    background: var(--forest);
+    border-radius: 100px;
+    padding: 5px 14px;
+    margin-bottom: 12px;
+  }
+
+  .cta-block {
+    background:
+      radial-gradient(circle at 15% 20%, rgba(201, 169, 110, 0.22) 0%, transparent 55%),
+      linear-gradient(135deg, var(--forest-deep) 0%, var(--forest) 100%);
+    border-radius: 16px;
+    padding: 48px 40px;
+    text-align: center;
+    color: var(--cream-warm);
+    margin: 40px 0;
+  }
+  .cta-block h3 {
+    color: var(--cream-warm);
+    margin-top: 0;
+    font-size: 30px;
+  }
+  .cta-block p { color: var(--gold-pale); max-width: 520px; margin: 0 auto 28px; }
+  .cta-button {
+    display: inline-block;
+    background: var(--terracotta);
+    color: var(--cream-light);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.06em;
+    padding: 16px 38px;
+    border-radius: 100px;
+    transition: background 0.25s ease, transform 0.25s ease;
+  }
+  .cta-button:hover { background: var(--terracotta-dark); transform: translateY(-2px); }
+
+  .commit-list { list-style: none; margin-left: 0; counter-reset: commit; }
+  .commit-list li {
+    counter-increment: commit;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    border-bottom: 1px dashed var(--gold-soft);
+    padding: 16px 0 14px;
+    min-height: 56px;
+  }
+  .commit-list li::before {
+    content: counter(commit);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    color: var(--terracotta);
+    line-height: 1.2;
+    min-width: 22px;
+  }
+  .commit-hint { color: #8a8378; font-style: italic; font-size: 15px; align-self: center; }
+
+  .practice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 28px;
+  }
+  .practice-tile {
+    background: var(--offwhite);
+    border: 1px solid var(--gold-pale);
+    border-radius: 14px;
+    padding: 26px 24px;
+  }
+  .practice-tile .tile-freq {
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--terracotta);
+    margin-bottom: 8px;
+  }
+  .practice-tile h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    color: var(--forest-deep);
+    margin-bottom: 8px;
+  }
+  .practice-tile p { font-size: 15px; margin-bottom: 0; }
+
+  .closing {
+    background: linear-gradient(135deg, var(--forest-deep) 0%, var(--forest) 100%);
+    color: var(--cream-warm);
+    text-align: center;
+    padding: 80px 32px;
+  }
+  .closing .pull {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 32px;
+    color: var(--gold-soft);
+    max-width: 620px;
+    margin: 0 auto 24px;
+    line-height: 1.4;
+  }
+  .closing .sign { font-size: 15px; color: var(--gold-pale); letter-spacing: 0.08em; }
+
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 40px; }
+    h2 { font-size: 30px; }
+    section { padding: 50px 0; }
+    .card { padding: 26px 22px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-eyebrow">Spiritual Badass Academy - VIP Session</div>
+  <h1>Clear the Gut,<br>Free the Intuition</h1>
+  <div class="hero-tagline">Your guide to giving the body its voice back</div>
+  <div class="hero-meta">PREPARED FOR FELICITY SHARPLEY</div>
+  <div class="signature-grid">
+    <div class="sig-item">
+      <div class="sig-label">Design</div>
+      <div class="sig-value">Generator</div>
+    </div>
+    <div class="sig-item">
+      <div class="sig-label">Authority</div>
+      <div class="sig-value">Sacral (the gut)</div>
+    </div>
+    <div class="sig-item">
+      <div class="sig-label">Profile</div>
+      <div class="sig-value">1/3 Investigator</div>
+    </div>
+    <div class="sig-item">
+      <div class="sig-label">Key Channel</div>
+      <div class="sig-value">34-57 - Power to Intuition</div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="section-eyebrow">Why this is your work</div>
+    <h2>Your gut and your intuition share one wire</h2>
+    <p>Felicity, here is the mechanism first - because you are a 1/3 Investigator and you deserve the why before the practice.</p>
+    <p>Your Human Design has exactly one fully defined channel: <em>the 34-57 Channel of Power</em>. It runs from your Sacral centre (your gut, your life force) directly into your Spleen - and the Spleen is THE intuition centre in Human Design. Gate 57 is literally called the Gate of Intuitive Clarity. Your gut power and your intuition are not two systems. They are one hard-wired line.</p>
+    <p>And your conscious Sun sits in <em>Gate 46 - the Love of the Body</em>. Embodiment is not a side quest for you; it is your soul's actual theme. Add your Virgo Sun - the sign that rules digestion and purification - and the picture is complete: your body is the antenna, your gut is the amplifier, and purifying it is your sign's own medicine.</p>
+    <div class="pullquote">Your intuition is not missing. It is muffled. Candida in the gut is static on the exact wire your knowing runs down - so clearing the gut IS the intuition training.</div>
+    <p>That is what this guide is for. One project, three parts: understand how your intuition actually speaks, clear the static, and train yourself to catch the signal.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-eyebrow">The Mechanism</div>
+    <h2>How your intuition actually speaks</h2>
+
+    <div class="card">
+      <h4>The Spleen speaks once, quietly, in the now</h4>
+      <p>Splenic intuition never repeats, never argues, never explains. It is the first hit - instant, quiet, body-level. If a voice comes back to negotiate or justify, that is the mind wearing an intuition costume. <em>The first whisper is the truth. Everything after it is commentary.</em></p>
+    </div>
+
+    <div class="card">
+      <h4>Your Sacral authority</h4>
+      <p>Your decisions are designed to arrive as a gut response - uh-huh or uh-uh - not as deliberation. Your Scorpio Moon will want to take everything into the cave and process it for days. Let it process the feelings; the decision was already made in the gut. Learning to trust the response before the analysis is the whole game for you.</p>
+    </div>
+
+    <div class="card">
+      <h4>A craving is not an intuition</h4>
+      <p>Here is how you tell them apart, and this matters for everything in this guide: <em>a craving begs and repeats. A splenic hit is instant, once, and gone.</em> Candida orders through you in the shape of cravings - loud, insistent, returning. Your intuition never begs. Every time you pause and pick the difference, you are literally training the skill you came here to develop.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-eyebrow">The Clearing</div>
+    <h2>Clearing the Candida</h2>
+    <p>The candida ferments in the gut, inflames the gut wall, and floods your system with noise - through the exact terrain your 34-57 channel runs on. As the gut clears, the intuitive hits get louder, faster and cleaner. This is not health admin. It is spiritual infrastructure.</p>
+
+    <div class="card">
+      <h4>Before you start: talk to your body</h4>
+      <p>Before day one of the protocol, journal. Have a real chat with your body. How does it feel walking? Sleeping? Day to day? No judgement, no "I've let myself go" chitchat - your body is always listening. The tone is: <em>"Body, I hear you. I hear everything you're telling me, and I'm getting you some help. I love you."</em></p>
+      <p>While you are there, do your body audit: write down every weird little physical anomaly - the reactivity, the niggles, the patterns. That list becomes our working map.</p>
+    </div>
+
+    <div class="card">
+      <h4>Your remedies</h4>
+      <ul>
+        <li><em>The 15C remedy spray</em> - Kelly is organising this for you. Spray under the tongue morning and night. One bottle lasts two to three months. That is the whole job.</li>
+        <li><em>The Bifido probiotic (from the US)</em> - Kelly is adding you to her next order. This shifts the candida off the gut wall so the good bacteria can colonise and seal the gut membrane - then what's in is in, what's out is out, and the inflammatory crossover stops.</li>
+      </ul>
+      <p>Food rules in one breath: all your veg except mushrooms, all your fruit except grapes, all your meat, milk, yoghurt and melted cheese are fine. Read your labels - you'll find yourself buying the same things, just different brands.</p>
+      <p>If you break the protocol, you will flare - a couple of days, wherever your weak spots are. For a 1/3 like you this is important: <em>a flare is not failure, it is research.</em> You learn by trial and error - that is your design, not a flaw. Note what happened, adjust, go again.</p>
+    </div>
+
+    <div class="cta-block">
+      <h3>The Candida Protocol</h3>
+      <p>Your full step-by-step clearing guide from Peace of Eden - what to remove, what to bring in, and how to move through the clear-out phase by phase.</p>
+      <a class="cta-button" href="https://aiwithsoulofficial.github.io/candida-protocol/">Open the Candida Protocol</a>
+    </div>
+
+    <div class="card">
+      <h4>Candida shopping with Kelly - safe foods</h4>
+      <p>Come shopping with me. These two videos walk you down the aisles and show you exactly what goes in the trolley - the safe foods that starve the candida instead of feeding it. Watch these before your first shop:</p>
+      <ul>
+        <li><a href="https://www.instagram.com/reel/ChjnXuFjEWY/?igsh=MTNzMTh3Ync5encxbQ==" style="color: var(--terracotta-dark); font-weight: 600;">Candida Shopping with Kelly - Part 1</a></li>
+        <li><a href="https://www.instagram.com/reel/Chk5pdUhRx5/?igsh=dWdsNDE2M2g4dzBm" style="color: var(--terracotta-dark); font-weight: 600;">Candida Shopping with Kelly - Part 2</a></li>
+      </ul>
+      <p>And the supermarket doubles as your intuition gym - sway-test as you go.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-eyebrow">The Training</div>
+    <h2>Catching the first whisper</h2>
+    <p>Two practices, both tiny, both daily. As a 1/3 you build trust through your own evidence - so treat these as experiments and keep the results in your journal. That data set is how your mind finally lets your body lead.</p>
+
+    <div class="card">
+      <h4>Practice one: the sway test (your body as pendulum)</h4>
+      <ol>
+        <li>Stand with feet hip-width apart, knees soft, eyes closed. Drop your attention into the belly.</li>
+        <li><em>Calibrate first.</em> Say out loud: "My name is Felicity." Feel the body tip gently forward - that is your yes. Now say a false name. Feel the body tip back - that is your no.</li>
+        <li>Once you can feel the difference, ask your real question. Clear yes/no questions only, stay neutral, and the FIRST movement is the answer. The moment the mind starts debating, you have left the tool.</li>
+      </ol>
+      <p>Test it on small things daily - a food, a supplement, a choice. Small experiments, honest notes. Your own evidence, Investigator.</p>
+    </div>
+
+    <div class="card">
+      <h4>Practice two: the daily first-whisper catch</h4>
+      <p>Once a day, catch a splenic hit BEFORE the mind speaks - which route to drive, which queue to join, which food to pick, whether to answer the phone. Act on it. Then journal what happened.</p>
+      <p>Your spleen has been talking your whole life. This practice is just turning your head toward it.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-eyebrow">Your Companion</div>
+    <h2>Working with Aurora</h2>
+    <p>Between our sessions, you are not on your own. Aurora carries your real chart, your Human Design, the sacred texts, and what is in the sky right now. She is your research library - and for a 1/3 Investigator, that is home turf. Go deep.</p>
+
+    <div class="card">
+      <h4>Starter questions from our session</h4>
+      <ol>
+        <li>"Explain my Channel of Power, 34-57 - how do my gut and my intuition work together?"</li>
+        <li>"What is splenic intuition and how do I recognise it in my body?"</li>
+        <li>"What does my 1/3 profile mean for how I learn and build trust in myself?"</li>
+        <li>"My conscious Sun is in Gate 46, the Love of the Body - what is my body trying to teach me?"</li>
+        <li>"What's happening in the sky this week and how is it landing in MY chart?"</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h4>The one rule</h4>
+      <p>Aurora informs. <em>Your Sacral decides.</em> Ask her anything, research everything - but the final yes or no always goes through your body. Sway-test the big stuff. She is the library. You are the authority.</p>
+    </div>
+
+    <div class="cta-block">
+      <h3>Talk to Aurora</h3>
+      <p>Your consciousness companion - charts calculated, not guessed. Log in with your email.</p>
+      <a class="cta-button" href="https://aurora-frontend-qhdu.onrender.com">Open Aurora</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-eyebrow">Your Commitments</div>
+    <h2>What your body said yes to</h2>
+    <p>These are the commitments from our session - the ones your own body chose through the sway test. Write them here in your words:</p>
+    <ol class="commit-list">
+      <li><span class="commit-hint">Your first commitment...</span></li>
+      <li><span class="commit-hint">Your second commitment...</span></li>
+      <li><span class="commit-hint">Your third commitment...</span></li>
+      <li><span class="commit-hint">Optional...</span></li>
+      <li><span class="commit-hint">Optional...</span></li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-eyebrow">The Rhythm</div>
+    <h2>Your daily practices</h2>
+    <div class="practice-grid">
+      <div class="practice-tile">
+        <div class="tile-freq">Before day one</div>
+        <h4>Body chat + body audit</h4>
+        <p>Journal the conversation with your body, and map every physical anomaly. This is the baseline for your research.</p>
+      </div>
+      <div class="practice-tile">
+        <div class="tile-freq">Ongoing</div>
+        <h4>The protocol</h4>
+        <p>Safe foods, the 15C spray morning and night, the Bifido when it lands. Flares are data, not failure.</p>
+      </div>
+      <div class="practice-tile">
+        <div class="tile-freq">Daily - 1 decision</div>
+        <h4>Sway test</h4>
+        <p>Test one real decision a day. The supermarket is the perfect training ground.</p>
+      </div>
+      <div class="practice-tile">
+        <div class="tile-freq">Daily - 1 catch</div>
+        <h4>First-whisper catch</h4>
+        <p>Catch one splenic hit before the mind speaks, act on it, journal the result.</p>
+      </div>
+      <div class="practice-tile">
+        <div class="tile-freq">Weekly</div>
+        <h4>One deep Aurora conversation</h4>
+        <p>Use the starter questions, research deep, then sway-test anything big that comes out of it.</p>
+      </div>
+    </div>
+    <p style="margin-top:28px;">Evening journal prompt: <em>what did my body know today before my mind caught up?</em></p>
+  </div>
+</section>
+
+<div class="closing">
+  <div class="pull">"Clear gut, clear signal. Your intuition isn't missing - it's muffled. We're unmuffling it."</div>
+  <div class="pull" style="font-size:24px;">You were built to know things through your body. Let's give the body its voice back.</div>
+  <div class="sign">With so much love - Kelly x<br><span style="letter-spacing:0.25em; font-size:11px; text-transform:uppercase; color:var(--gold);">Spiritual Badass Academy</span></div>
+</div>
+
+</body>
+</html>
